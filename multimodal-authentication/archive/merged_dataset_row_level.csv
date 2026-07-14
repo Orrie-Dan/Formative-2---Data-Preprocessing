@@ -1,0 +1,583 @@
+customer_id,social_media_platform,engagement_score,purchase_interest_score,review_sentiment,transaction_id,timestamp,amount,currency,merchant,category,channel,device_type,location,status,is_fraud,sentiment_score
+A178,LinkedIn,74,4.9,Positive,T0245,2025-01-21 18:06:00,19899.83,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Approved,False,2
+A178,LinkedIn,74,4.9,Positive,T0246,2025-02-24 15:38:00,878.78,ZAR,Makro,Wholesale,Card,Mobile,Pretoria,Approved,False,2
+A178,LinkedIn,74,4.9,Positive,T0247,2025-02-02 09:17:00,2071.57,ZAR,Shell,Fuel,Card,Mobile,Johannesburg,Approved,False,2
+A178,LinkedIn,74,4.9,Positive,T0248,2025-02-21 04:21:00,3018.97,ZAR,Travelstart,Travel,Online,Mobile,Bloemfontein,Approved,False,2
+A178,LinkedIn,74,4.9,Positive,T0249,2025-01-13 20:14:00,2801.41,ZAR,Pick n Pay,Groceries,Card,Mobile,Durban,Approved,False,2
+A178,LinkedIn,74,4.9,Positive,T0250,2025-01-11 09:27:00,449.18,ZAR,Travelstart,Travel,Online,Desktop,Bloemfontein,Approved,False,2
+A190,Twitter,82,4.8,Neutral,T0285,2025-03-31 10:02:00,21396.18,ZAR,Unknown Vendor,Other,Online,Mobile,Unknown,Declined,True,1
+A190,Twitter,82,4.8,Neutral,T0286,2025-03-27 02:34:00,1167.58,ZAR,Dischem,Health,Card,Desktop,Pretoria,Approved,False,1
+A190,Twitter,82,4.8,Neutral,T0287,2025-02-14 12:29:00,8406.82,ZAR,Crypto Exchange,Finance,Online,Mobile,Unknown,Approved,False,1
+A190,Twitter,82,4.8,Neutral,T0288,2025-02-22 11:07:00,12614.65,ZAR,Wire Transfer,Finance,Online,Desktop,Moscow,Declined,True,1
+A190,Twitter,82,4.8,Neutral,T0289,2025-01-10 19:51:00,716.57,ZAR,Shell,Fuel,Card,Mobile,Port Elizabeth,Approved,False,1
+A190,Twitter,82,4.8,Neutral,T0290,2025-02-06 10:25:00,1287.42,ZAR,Makro,Wholesale,Card,Desktop,Soweto,Approved,False,1
+A150,Facebook,96,1.6,Positive,T0159,2025-02-27 10:51:00,2754.19,ZAR,Uber,Transport,App,Mobile,Bloemfontein,Approved,False,2
+A150,Facebook,96,1.6,Positive,T0160,2025-03-02 21:16:00,18491.95,ZAR,Wire Transfer,Finance,Online,Desktop,Moscow,Approved,False,2
+A150,Facebook,96,1.6,Positive,T0161,2025-01-29 02:25:00,1989.49,ZAR,Mr Price,Clothing,Card,Desktop,Johannesburg,Approved,False,2
+A150,Facebook,96,1.6,Positive,T0162,2025-03-26 10:08:00,1818.93,ZAR,Shell,Fuel,Card,Mobile,Port Elizabeth,Approved,False,2
+A162,Twitter,89,2.6,Positive,T0196,2025-02-08 17:27:00,755.17,ZAR,Nandos,Food,Card,Mobile,Cape Town,Approved,False,2
+A162,Twitter,89,2.6,Positive,T0197,2025-03-14 17:55:00,1351.15,ZAR,Takealot,Ecommerce,Online,Desktop,Port Elizabeth,Approved,False,2
+A162,Twitter,89,2.6,Positive,T0198,2025-02-01 14:34:00,1151.01,ZAR,Makro,Wholesale,Card,Desktop,Durban,Approved,False,2
+A162,Twitter,89,2.6,Positive,T0199,2025-02-21 22:30:00,2126.12,ZAR,Dischem,Health,Card,Mobile,Durban,Approved,False,2
+A162,Twitter,89,2.6,Positive,T0200,2025-02-02 09:46:00,1351.36,ZAR,Pick n Pay,Groceries,Card,Mobile,Johannesburg,Approved,False,2
+A197,Twitter,92,2.3,Neutral,T0316,2025-03-31 01:10:00,12944.67,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True,1
+A197,Twitter,92,2.3,Neutral,T0317,2025-02-16 06:11:00,703.3,ZAR,Shell,Fuel,Card,Desktop,Durban,Approved,False,1
+A197,Twitter,92,2.3,Neutral,T0318,2025-01-12 16:32:00,3042.2,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False,1
+A197,Twitter,92,2.3,Neutral,T0319,2025-02-02 22:37:00,2955.43,ZAR,Woolworths,Retail,Card,Mobile,Port Elizabeth,Approved,False,1
+A197,Twitter,92,2.3,Neutral,T0320,2025-03-28 21:12:00,15913.51,ZAR,Gift Cards Online,Other,Online,Desktop,Moscow,Declined,True,1
+A197,Twitter,92,2.3,Neutral,T0321,2025-02-11 10:51:00,1716.14,ZAR,Mr Price,Clothing,Card,Mobile,Soweto,Approved,False,1
+A151,TikTok,61,1.3,Neutral,T0163,2025-01-23 13:03:00,7060.05,ZAR,Wire Transfer,Finance,Online,Desktop,Unknown,Declined,True,1
+A151,TikTok,61,1.3,Neutral,T0164,2025-01-29 01:03:00,1830.5,ZAR,Mr Price,Clothing,Card,Desktop,Bloemfontein,Approved,False,1
+A151,TikTok,61,1.3,Neutral,T0165,2025-01-06 21:41:00,1376.54,ZAR,Woolworths,Retail,Card,Mobile,Bloemfontein,Approved,False,1
+A151,TikTok,61,1.3,Neutral,T0166,2025-02-05 05:24:00,1092.15,ZAR,Takealot,Ecommerce,Online,Mobile,Pretoria,Approved,False,1
+A151,TikTok,61,1.3,Neutral,T0167,2025-03-19 03:00:00,436.64,ZAR,Pick n Pay,Groceries,Card,Mobile,Durban,Approved,False,1
+A151,TikTok,61,1.3,Neutral,T0168,2025-01-30 09:25:00,1738.78,ZAR,Nandos,Food,Card,Desktop,Cape Town,Approved,False,1
+A137,LinkedIn,93,3.5,Neutral,T0108,2025-02-06 20:13:00,1470.75,ZAR,Makro,Wholesale,Card,Desktop,Johannesburg,Approved,False,1
+A137,LinkedIn,93,3.5,Neutral,T0109,2025-01-04 07:25:00,1143.79,ZAR,Makro,Wholesale,Card,Mobile,Port Elizabeth,Approved,False,1
+A137,LinkedIn,93,3.5,Neutral,T0110,2025-02-21 08:33:00,828.3,ZAR,Mr Price,Clothing,Card,Desktop,Cape Town,Approved,False,1
+A137,LinkedIn,93,3.5,Neutral,T0111,2025-02-28 14:18:00,2285.42,ZAR,Travelstart,Travel,Online,Mobile,Soweto,Approved,False,1
+A196,Instagram,85,3.9,Negative,T0313,2025-03-05 13:18:00,24174.15,ZAR,Wire Transfer,Finance,Online,Desktop,Unknown,Declined,True,0
+A196,Instagram,85,3.9,Negative,T0314,2025-03-17 21:07:00,5902.29,ZAR,Gift Cards Online,Other,Online,Mobile,Moscow,Approved,False,0
+A196,Instagram,85,3.9,Negative,T0315,2025-01-15 17:32:00,2929.74,ZAR,Pick n Pay,Groceries,Card,Mobile,Port Elizabeth,Approved,False,0
+A187,LinkedIn,97,4.4,Negative,T0276,2025-03-17 01:21:00,2384.45,ZAR,Mr Price,Clothing,Card,Mobile,Pretoria,Approved,False,0
+A187,LinkedIn,97,4.4,Negative,T0277,2025-03-11 15:46:00,3136.06,ZAR,Pick n Pay,Groceries,Card,Mobile,Johannesburg,Approved,False,0
+A187,LinkedIn,97,4.4,Negative,T0278,2025-03-17 22:28:00,14399.12,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Declined,True,0
+A178,LinkedIn,53,1.5,Neutral,T0245,2025-01-21 18:06:00,19899.83,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Approved,False,1
+A178,LinkedIn,53,1.5,Neutral,T0246,2025-02-24 15:38:00,878.78,ZAR,Makro,Wholesale,Card,Mobile,Pretoria,Approved,False,1
+A178,LinkedIn,53,1.5,Neutral,T0247,2025-02-02 09:17:00,2071.57,ZAR,Shell,Fuel,Card,Mobile,Johannesburg,Approved,False,1
+A178,LinkedIn,53,1.5,Neutral,T0248,2025-02-21 04:21:00,3018.97,ZAR,Travelstart,Travel,Online,Mobile,Bloemfontein,Approved,False,1
+A178,LinkedIn,53,1.5,Neutral,T0249,2025-01-13 20:14:00,2801.41,ZAR,Pick n Pay,Groceries,Card,Mobile,Durban,Approved,False,1
+A178,LinkedIn,53,1.5,Neutral,T0250,2025-01-11 09:27:00,449.18,ZAR,Travelstart,Travel,Online,Desktop,Bloemfontein,Approved,False,1
+A129,Twitter,54,4.5,Neutral,T0081,2025-01-22 14:08:00,20984.89,ZAR,Unknown Vendor,Other,Online,Desktop,Moscow,Declined,True,1
+A129,Twitter,54,4.5,Neutral,T0082,2025-02-13 15:43:00,7342.07,ZAR,Crypto Exchange,Finance,Online,Mobile,Unknown,Declined,True,1
+A129,Twitter,54,4.5,Neutral,T0083,2025-03-08 21:49:00,18424.63,ZAR,Gift Cards Online,Other,Online,Desktop,Moscow,Declined,True,1
+A129,Twitter,54,4.5,Neutral,T0084,2025-02-17 07:18:00,1306.46,ZAR,Makro,Wholesale,Card,Mobile,Johannesburg,Approved,False,1
+A150,LinkedIn,86,3.6,Neutral,T0159,2025-02-27 10:51:00,2754.19,ZAR,Uber,Transport,App,Mobile,Bloemfontein,Approved,False,1
+A150,LinkedIn,86,3.6,Neutral,T0160,2025-03-02 21:16:00,18491.95,ZAR,Wire Transfer,Finance,Online,Desktop,Moscow,Approved,False,1
+A150,LinkedIn,86,3.6,Neutral,T0161,2025-01-29 02:25:00,1989.49,ZAR,Mr Price,Clothing,Card,Desktop,Johannesburg,Approved,False,1
+A150,LinkedIn,86,3.6,Neutral,T0162,2025-03-26 10:08:00,1818.93,ZAR,Shell,Fuel,Card,Mobile,Port Elizabeth,Approved,False,1
+A180,Facebook,57,3.8,Negative,T0254,2025-02-15 13:14:00,1511.06,ZAR,Makro,Wholesale,Card,Desktop,Johannesburg,Approved,False,0
+A180,Facebook,57,3.8,Negative,T0255,2025-01-01 23:01:00,2301.77,ZAR,Shell,Fuel,Card,Desktop,Soweto,Approved,False,0
+A180,Facebook,57,3.8,Negative,T0256,2025-03-03 17:07:00,378.44,ZAR,Pick n Pay,Groceries,Card,Desktop,Pretoria,Approved,False,0
+A180,Facebook,57,3.8,Negative,T0257,2025-01-17 10:12:00,1641.17,ZAR,Shell,Fuel,Card,Mobile,Durban,Approved,False,0
+A180,Facebook,57,3.8,Negative,T0258,2025-01-30 18:40:00,1269.02,ZAR,Dischem,Health,Card,Desktop,Soweto,Approved,False,0
+A180,Facebook,57,3.8,Negative,T0259,2025-01-22 17:42:00,13333.32,ZAR,Gift Cards Online,Other,Online,Desktop,Moscow,Declined,True,0
+A104,Twitter,91,4.6,Negative,T0014,2025-03-02 15:28:00,445.13,ZAR,Woolworths,Retail,Card,Desktop,Pretoria,Approved,False,0
+A104,Twitter,91,4.6,Negative,T0015,2025-02-27 13:33:00,2689.25,ZAR,Nandos,Food,Card,Mobile,Soweto,Approved,False,0
+A128,Facebook,98,3.5,Positive,T0079,2025-01-09 12:36:00,2085.76,ZAR,Uber,Transport,App,Mobile,Cape Town,Approved,False,2
+A128,Facebook,98,3.5,Positive,T0080,2025-02-21 11:27:00,1999.08,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False,2
+A103,Instagram,77,2.3,Positive,T0010,2025-01-09 07:46:00,2465.91,ZAR,Takealot,Ecommerce,Online,Desktop,Bloemfontein,Approved,False,2
+A103,Instagram,77,2.3,Positive,T0011,2025-03-22 06:14:00,1386.8,ZAR,Mr Price,Clothing,Card,Desktop,Bloemfontein,Approved,False,2
+A103,Instagram,77,2.3,Positive,T0012,2025-03-14 00:47:00,739.68,ZAR,Makro,Wholesale,Card,Desktop,Cape Town,Approved,False,2
+A103,Instagram,77,2.3,Positive,T0013,2025-02-20 11:30:00,19103.31,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Approved,False,2
+A109,Twitter,80,4.3,Neutral,T0025,2025-01-09 10:54:00,989.23,ZAR,Mr Price,Clothing,Card,Mobile,Cape Town,Approved,False,1
+A109,Twitter,80,4.3,Neutral,T0026,2025-01-28 19:34:00,748.15,ZAR,Mr Price,Clothing,Card,Desktop,Bloemfontein,Approved,False,1
+A109,Twitter,80,4.3,Neutral,T0027,2025-03-10 11:43:00,3005.32,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False,1
+A109,Twitter,80,4.3,Neutral,T0028,2025-02-22 02:38:00,2214.22,ZAR,Mr Price,Clothing,Card,Desktop,Cape Town,Approved,False,1
+A109,Twitter,80,4.3,Neutral,T0029,2025-01-04 04:29:00,1484.54,ZAR,Woolworths,Retail,Card,Mobile,Bloemfontein,Approved,False,1
+A155,Instagram,58,2.5,Negative,T0176,2025-03-29 14:54:00,1617.88,ZAR,Uber,Transport,App,Desktop,Port Elizabeth,Approved,False,0
+A155,Instagram,58,2.5,Negative,T0177,2025-01-14 07:32:00,2855.4,ZAR,Woolworths,Retail,Card,Desktop,Durban,Approved,False,0
+A155,Instagram,58,2.5,Negative,T0178,2025-02-16 09:38:00,796.43,ZAR,Woolworths,Retail,Card,Mobile,Soweto,Approved,False,0
+A116,Twitter,78,1.1,Negative,T0046,2025-03-11 07:58:00,8928.69,ZAR,Gift Cards Online,Other,Online,Mobile,Moscow,Declined,True,0
+A116,Twitter,78,1.1,Negative,T0047,2025-01-02 04:13:00,546.45,ZAR,Nandos,Food,Card,Mobile,Port Elizabeth,Approved,False,0
+A116,Twitter,78,1.1,Negative,T0048,2025-01-11 07:30:00,2387.92,ZAR,Woolworths,Retail,Card,Desktop,Port Elizabeth,Approved,False,0
+A116,Twitter,78,1.1,Negative,T0049,2025-01-18 20:48:00,2054.85,ZAR,Travelstart,Travel,Online,Mobile,Durban,Approved,False,0
+A116,Twitter,78,1.1,Negative,T0050,2025-01-12 13:55:00,19779.68,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Declined,True,0
+A173,TikTok,63,4.3,Negative,T0229,2025-02-17 08:33:00,3327.71,ZAR,Woolworths,Retail,Card,Mobile,Pretoria,Approved,False,0
+A173,TikTok,63,4.3,Negative,T0230,2025-02-22 00:59:00,2968.73,ZAR,Woolworths,Retail,Card,Mobile,Soweto,Approved,False,0
+A173,TikTok,63,4.3,Negative,T0231,2025-01-25 23:27:00,2636.18,ZAR,Shell,Fuel,Card,Desktop,Port Elizabeth,Approved,False,0
+A173,TikTok,63,4.3,Negative,T0232,2025-03-06 08:44:00,11049.61,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Approved,False,0
+A116,LinkedIn,89,2.4,Neutral,T0046,2025-03-11 07:58:00,8928.69,ZAR,Gift Cards Online,Other,Online,Mobile,Moscow,Declined,True,1
+A116,LinkedIn,89,2.4,Neutral,T0047,2025-01-02 04:13:00,546.45,ZAR,Nandos,Food,Card,Mobile,Port Elizabeth,Approved,False,1
+A116,LinkedIn,89,2.4,Neutral,T0048,2025-01-11 07:30:00,2387.92,ZAR,Woolworths,Retail,Card,Desktop,Port Elizabeth,Approved,False,1
+A116,LinkedIn,89,2.4,Neutral,T0049,2025-01-18 20:48:00,2054.85,ZAR,Travelstart,Travel,Online,Mobile,Durban,Approved,False,1
+A116,LinkedIn,89,2.4,Neutral,T0050,2025-01-12 13:55:00,19779.68,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Declined,True,1
+A183,TikTok,90,4.1,Positive,T0264,2025-03-15 01:05:00,21462.49,ZAR,Gift Cards Online,Other,Online,Mobile,Lagos,Declined,True,2
+A183,TikTok,90,4.1,Positive,T0265,2025-01-24 07:45:00,2595.4,ZAR,Dischem,Health,Card,Mobile,Soweto,Approved,False,2
+A187,Instagram,71,2.5,Neutral,T0276,2025-03-17 01:21:00,2384.45,ZAR,Mr Price,Clothing,Card,Mobile,Pretoria,Approved,False,1
+A187,Instagram,71,2.5,Neutral,T0277,2025-03-11 15:46:00,3136.06,ZAR,Pick n Pay,Groceries,Card,Mobile,Johannesburg,Approved,False,1
+A187,Instagram,71,2.5,Neutral,T0278,2025-03-17 22:28:00,14399.12,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Declined,True,1
+A168,LinkedIn,60,4.4,Positive,T0217,2025-02-17 09:32:00,15353.23,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Declined,True,2
+A168,LinkedIn,60,4.4,Positive,T0218,2025-01-12 04:57:00,504.55,ZAR,Mr Price,Clothing,Card,Mobile,Durban,Approved,False,2
+A133,Twitter,72,1.9,Positive,T0097,2025-03-04 19:50:00,23555.91,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Approved,False,2
+A133,Twitter,72,1.9,Positive,T0098,2025-01-12 16:30:00,746.15,ZAR,Pick n Pay,Groceries,Card,Desktop,Cape Town,Approved,False,2
+A133,Twitter,72,1.9,Positive,T0099,2025-01-14 19:44:00,17600.24,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Approved,False,2
+A133,Twitter,72,1.9,Positive,T0100,2025-03-05 12:58:00,984.12,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False,2
+A133,Twitter,72,1.9,Positive,T0101,2025-02-25 00:02:00,238.03,ZAR,Makro,Wholesale,Card,Mobile,Cape Town,Approved,False,2
+A105,LinkedIn,50,4.9,Neutral,T0016,2025-03-30 05:16:00,5616.36,ZAR,Crypto Exchange,Finance,Online,Mobile,Unknown,Declined,True,1
+A105,LinkedIn,50,4.9,Neutral,T0017,2025-03-19 06:55:00,9678.79,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Declined,True,1
+A105,LinkedIn,50,4.9,Neutral,T0018,2025-02-15 18:59:00,1971.76,ZAR,Mr Price,Clothing,Card,Desktop,Soweto,Approved,False,1
+A105,LinkedIn,50,4.9,Neutral,T0019,2025-01-29 04:20:00,2858.37,ZAR,Dischem,Health,Card,Mobile,Durban,Approved,False,1
+A152,Facebook,95,4.1,Positive,T0169,2025-01-21 07:35:00,948.2,ZAR,Mr Price,Clothing,Card,Mobile,Bloemfontein,Approved,False,2
+A152,Facebook,95,4.1,Positive,T0170,2025-03-08 07:14:00,18665.17,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True,2
+A152,Facebook,95,4.1,Positive,T0171,2025-03-19 17:11:00,1639.66,ZAR,Mr Price,Clothing,Card,Mobile,Cape Town,Approved,False,2
+A152,Facebook,95,4.1,Positive,T0172,2025-01-02 22:05:00,526.81,ZAR,Makro,Wholesale,Card,Mobile,Cape Town,Approved,False,2
+A152,Facebook,95,4.1,Positive,T0173,2025-03-05 14:28:00,5625.67,ZAR,Wire Transfer,Finance,Online,Mobile,Unknown,Declined,True,2
+A165,LinkedIn,86,1.5,Positive,T0204,2025-01-01 11:05:00,205.85,ZAR,Mr Price,Clothing,Card,Desktop,Johannesburg,Approved,False,2
+A165,LinkedIn,86,1.5,Positive,T0205,2025-03-21 02:14:00,1759.5,ZAR,Uber,Transport,App,Mobile,Soweto,Approved,False,2
+A165,LinkedIn,86,1.5,Positive,T0206,2025-01-28 21:46:00,2688.57,ZAR,Woolworths,Retail,Card,Desktop,Durban,Approved,False,2
+A165,LinkedIn,86,1.5,Positive,T0207,2025-02-01 22:35:00,3439.17,ZAR,Woolworths,Retail,Card,Mobile,Port Elizabeth,Approved,False,2
+A176,Facebook,70,3.3,Negative,T0236,2025-03-14 04:09:00,5395.33,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Declined,True,0
+A176,Facebook,70,3.3,Negative,T0237,2025-01-16 03:52:00,9933.61,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Declined,True,0
+A176,Facebook,70,3.3,Negative,T0238,2025-03-24 21:44:00,10670.42,ZAR,Unknown Vendor,Other,Online,Mobile,Unknown,Declined,True,0
+A176,Facebook,70,3.3,Negative,T0239,2025-02-22 14:44:00,19027.82,ZAR,Wire Transfer,Finance,Online,Mobile,Lagos,Approved,False,0
+A176,Facebook,70,3.3,Negative,T0240,2025-03-06 23:31:00,1155.69,ZAR,Shell,Fuel,Card,Mobile,Soweto,Approved,False,0
+A142,LinkedIn,75,4.9,Positive,T0128,2025-03-25 20:19:00,15790.55,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Declined,True,2
+A142,LinkedIn,75,4.9,Positive,T0129,2025-02-03 12:25:00,2989.45,ZAR,Nandos,Food,Card,Desktop,Bloemfontein,Approved,False,2
+A174,Facebook,95,2.9,Neutral,T0233,2025-03-06 14:30:00,1988.28,ZAR,Dischem,Health,Card,Desktop,Johannesburg,Approved,False,1
+A174,Facebook,95,2.9,Neutral,T0234,2025-01-31 16:24:00,13386.02,ZAR,Gift Cards Online,Other,Online,Mobile,Lagos,Declined,True,1
+A174,Facebook,95,2.9,Neutral,T0235,2025-01-09 07:40:00,484.03,ZAR,Mr Price,Clothing,Card,Mobile,Bloemfontein,Approved,False,1
+A122,Instagram,85,1.7,Neutral,T0065,2025-03-25 12:53:00,5985.08,ZAR,Wire Transfer,Finance,Online,Mobile,Lagos,Declined,True,1
+A122,Instagram,85,1.7,Neutral,T0066,2025-02-06 22:41:00,229.27,ZAR,Woolworths,Retail,Card,Mobile,Bloemfontein,Approved,False,1
+A122,Instagram,85,1.7,Neutral,T0067,2025-01-29 19:34:00,23053.06,ZAR,Crypto Exchange,Finance,Online,Desktop,Moscow,Approved,False,1
+A122,Instagram,85,1.7,Neutral,T0068,2025-03-08 03:49:00,2737.54,ZAR,Makro,Wholesale,Card,Desktop,Soweto,Approved,False,1
+A154,TikTok,72,2.9,Positive,T0174,2025-03-18 11:00:00,2086.17,ZAR,Nandos,Food,Card,Mobile,Soweto,Approved,False,2
+A154,TikTok,72,2.9,Positive,T0175,2025-03-11 23:51:00,17382.38,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Declined,True,2
+A179,Twitter,50,3.0,Negative,T0251,2025-02-08 09:37:00,581.17,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False,0
+A179,Twitter,50,3.0,Negative,T0252,2025-01-13 14:47:00,24616.42,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Declined,True,0
+A179,Twitter,50,3.0,Negative,T0253,2025-03-01 10:06:00,3102.73,ZAR,Uber,Transport,App,Desktop,Johannesburg,Approved,False,0
+A194,LinkedIn,89,4.0,Negative,T0306,2025-03-20 01:01:00,10687.94,ZAR,Crypto Exchange,Finance,Online,Desktop,Moscow,Declined,True,0
+A194,LinkedIn,89,4.0,Negative,T0307,2025-03-04 13:09:00,1649.68,ZAR,Nandos,Food,Card,Desktop,Pretoria,Approved,False,0
+A194,LinkedIn,89,4.0,Negative,T0308,2025-02-25 03:02:00,1349.73,ZAR,Travelstart,Travel,Online,Desktop,Bloemfontein,Approved,False,0
+A174,TikTok,64,3.8,Positive,T0233,2025-03-06 14:30:00,1988.28,ZAR,Dischem,Health,Card,Desktop,Johannesburg,Approved,False,2
+A174,TikTok,64,3.8,Positive,T0234,2025-01-31 16:24:00,13386.02,ZAR,Gift Cards Online,Other,Online,Mobile,Lagos,Declined,True,2
+A174,TikTok,64,3.8,Positive,T0235,2025-01-09 07:40:00,484.03,ZAR,Mr Price,Clothing,Card,Mobile,Bloemfontein,Approved,False,2
+A115,Twitter,70,2.6,Positive,T0043,2025-02-06 08:53:00,2332.73,ZAR,Pick n Pay,Groceries,Card,Mobile,Bloemfontein,Approved,False,2
+A115,Twitter,70,2.6,Positive,T0044,2025-03-27 05:01:00,10249.21,ZAR,Unknown Vendor,Other,Online,Mobile,Moscow,Approved,False,2
+A115,Twitter,70,2.6,Positive,T0045,2025-03-09 04:22:00,578.83,ZAR,Pick n Pay,Groceries,Card,Desktop,Bloemfontein,Approved,False,2
+A107,Twitter,96,1.9,Neutral,T0022,2025-02-24 08:57:00,2224.47,ZAR,Uber,Transport,App,Mobile,Durban,Approved,False,1
+A107,Twitter,96,1.9,Neutral,T0023,2025-02-02 21:29:00,3368.55,ZAR,Shell,Fuel,Card,Desktop,Cape Town,Approved,False,1
+A107,Twitter,96,1.9,Neutral,T0024,2025-01-24 18:15:00,3393.66,ZAR,Mr Price,Clothing,Card,Desktop,Johannesburg,Approved,False,1
+A103,Facebook,58,3.6,Positive,T0010,2025-01-09 07:46:00,2465.91,ZAR,Takealot,Ecommerce,Online,Desktop,Bloemfontein,Approved,False,2
+A103,Facebook,58,3.6,Positive,T0011,2025-03-22 06:14:00,1386.8,ZAR,Mr Price,Clothing,Card,Desktop,Bloemfontein,Approved,False,2
+A103,Facebook,58,3.6,Positive,T0012,2025-03-14 00:47:00,739.68,ZAR,Makro,Wholesale,Card,Desktop,Cape Town,Approved,False,2
+A103,Facebook,58,3.6,Positive,T0013,2025-02-20 11:30:00,19103.31,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Approved,False,2
+A103,Instagram,58,2.7,Negative,T0010,2025-01-09 07:46:00,2465.91,ZAR,Takealot,Ecommerce,Online,Desktop,Bloemfontein,Approved,False,0
+A103,Instagram,58,2.7,Negative,T0011,2025-03-22 06:14:00,1386.8,ZAR,Mr Price,Clothing,Card,Desktop,Bloemfontein,Approved,False,0
+A103,Instagram,58,2.7,Negative,T0012,2025-03-14 00:47:00,739.68,ZAR,Makro,Wholesale,Card,Desktop,Cape Town,Approved,False,0
+A103,Instagram,58,2.7,Negative,T0013,2025-02-20 11:30:00,19103.31,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Approved,False,0
+A155,Instagram,59,1.5,Positive,T0176,2025-03-29 14:54:00,1617.88,ZAR,Uber,Transport,App,Desktop,Port Elizabeth,Approved,False,2
+A155,Instagram,59,1.5,Positive,T0177,2025-01-14 07:32:00,2855.4,ZAR,Woolworths,Retail,Card,Desktop,Durban,Approved,False,2
+A155,Instagram,59,1.5,Positive,T0178,2025-02-16 09:38:00,796.43,ZAR,Woolworths,Retail,Card,Mobile,Soweto,Approved,False,2
+A124,TikTok,75,4.6,Neutral,T0069,2025-02-11 18:23:00,3008.62,ZAR,Nandos,Food,Card,Desktop,Bloemfontein,Approved,False,1
+A124,TikTok,75,4.6,Neutral,T0070,2025-01-13 10:28:00,969.3,ZAR,Makro,Wholesale,Card,Mobile,Cape Town,Approved,False,1
+A124,TikTok,75,4.6,Neutral,T0071,2025-02-03 12:21:00,852.37,ZAR,Dischem,Health,Card,Desktop,Durban,Approved,False,1
+A166,Instagram,90,3.8,Neutral,T0208,2025-02-19 10:05:00,1100.41,ZAR,Woolworths,Retail,Card,Desktop,Johannesburg,Approved,False,1
+A166,Instagram,90,3.8,Neutral,T0209,2025-01-15 01:15:00,17335.12,ZAR,Crypto Exchange,Finance,Online,Mobile,Lagos,Declined,True,1
+A166,Instagram,90,3.8,Neutral,T0210,2025-02-22 12:44:00,2989.17,ZAR,Takealot,Ecommerce,Online,Desktop,Durban,Approved,False,1
+A166,Instagram,90,3.8,Neutral,T0211,2025-02-06 02:45:00,1330.82,ZAR,Shell,Fuel,Card,Mobile,Bloemfontein,Approved,False,1
+A195,LinkedIn,84,3.7,Neutral,T0309,2025-02-21 04:29:00,9286.53,ZAR,Wire Transfer,Finance,Online,Mobile,Lagos,Declined,True,1
+A195,LinkedIn,84,3.7,Neutral,T0310,2025-01-18 09:13:00,3318.25,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False,1
+A195,LinkedIn,84,3.7,Neutral,T0311,2025-02-22 15:59:00,328.54,ZAR,Dischem,Health,Card,Desktop,Port Elizabeth,Approved,False,1
+A195,LinkedIn,84,3.7,Neutral,T0312,2025-02-02 00:12:00,13580.52,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True,1
+A166,Instagram,74,4.3,Neutral,T0208,2025-02-19 10:05:00,1100.41,ZAR,Woolworths,Retail,Card,Desktop,Johannesburg,Approved,False,1
+A166,Instagram,74,4.3,Neutral,T0209,2025-01-15 01:15:00,17335.12,ZAR,Crypto Exchange,Finance,Online,Mobile,Lagos,Declined,True,1
+A166,Instagram,74,4.3,Neutral,T0210,2025-02-22 12:44:00,2989.17,ZAR,Takealot,Ecommerce,Online,Desktop,Durban,Approved,False,1
+A166,Instagram,74,4.3,Neutral,T0211,2025-02-06 02:45:00,1330.82,ZAR,Shell,Fuel,Card,Mobile,Bloemfontein,Approved,False,1
+A126,TikTok,75,3.1,Neutral,T0075,2025-01-19 14:41:00,2585.38,ZAR,Shell,Fuel,Card,Desktop,Cape Town,Approved,False,1
+A126,TikTok,75,3.1,Neutral,T0076,2025-01-09 14:43:00,7642.06,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True,1
+A192,Instagram,60,4.3,Positive,T0296,2025-01-05 15:56:00,16947.89,ZAR,Gift Cards Online,Other,Online,Desktop,Moscow,Declined,True,2
+A192,Instagram,60,4.3,Positive,T0297,2025-02-22 23:00:00,3237.46,ZAR,Dischem,Health,Card,Desktop,Port Elizabeth,Approved,False,2
+A192,Instagram,60,4.3,Positive,T0298,2025-02-20 01:01:00,2397.44,ZAR,Pick n Pay,Groceries,Card,Mobile,Port Elizabeth,Approved,False,2
+A192,Instagram,60,4.3,Positive,T0299,2025-02-11 10:00:00,22042.91,ZAR,Unknown Vendor,Other,Online,Desktop,Unknown,Declined,True,2
+A192,Instagram,60,4.3,Positive,T0300,2025-02-03 20:33:00,11614.32,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Approved,False,2
+A192,Instagram,60,4.3,Positive,T0301,2025-03-11 03:29:00,604.03,ZAR,Uber,Transport,App,Mobile,Pretoria,Approved,False,2
+A131,LinkedIn,87,3.0,Positive,T0085,2025-02-09 17:22:00,3279.64,ZAR,Takealot,Ecommerce,Online,Mobile,Pretoria,Approved,False,2
+A131,LinkedIn,87,3.0,Positive,T0086,2025-03-12 14:28:00,16059.86,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Approved,False,2
+A131,LinkedIn,87,3.0,Positive,T0087,2025-03-06 20:57:00,3453.88,ZAR,Dischem,Health,Card,Mobile,Cape Town,Approved,False,2
+A131,LinkedIn,87,3.0,Positive,T0088,2025-02-27 02:07:00,2984.34,ZAR,Woolworths,Retail,Card,Mobile,Port Elizabeth,Approved,False,2
+A131,LinkedIn,87,3.0,Positive,T0089,2025-01-02 02:27:00,2417.03,ZAR,Makro,Wholesale,Card,Desktop,Pretoria,Approved,False,2
+A131,LinkedIn,87,3.0,Positive,T0090,2025-02-09 00:18:00,10907.18,ZAR,Crypto Exchange,Finance,Online,Desktop,Unknown,Declined,True,2
+A149,Facebook,51,1.3,Positive,T0156,2025-03-23 07:31:00,1172.43,ZAR,Uber,Transport,App,Desktop,Port Elizabeth,Approved,False,2
+A149,Facebook,51,1.3,Positive,T0157,2025-01-27 20:14:00,16814.9,ZAR,Unknown Vendor,Other,Online,Mobile,Unknown,Declined,True,2
+A149,Facebook,51,1.3,Positive,T0158,2025-03-20 00:16:00,586.27,ZAR,Shell,Fuel,Card,Mobile,Durban,Approved,False,2
+A160,TikTok,56,2.6,Positive,T0190,2025-02-16 10:24:00,2796.3,ZAR,Pick n Pay,Groceries,Card,Desktop,Durban,Approved,False,2
+A160,TikTok,56,2.6,Positive,T0191,2025-02-05 03:40:00,3119.31,ZAR,Woolworths,Retail,Card,Mobile,Soweto,Approved,False,2
+A160,TikTok,56,2.6,Positive,T0192,2025-01-17 16:11:00,3367.35,ZAR,Takealot,Ecommerce,Online,Desktop,Johannesburg,Approved,False,2
+A160,TikTok,56,2.6,Positive,T0193,2025-02-12 21:44:00,23251.65,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True,2
+A160,TikTok,56,2.6,Positive,T0194,2025-03-08 15:43:00,12581.05,ZAR,Gift Cards Online,Other,Online,Desktop,Unknown,Declined,True,2
+A160,TikTok,56,2.6,Positive,T0195,2025-03-23 16:51:00,16398.68,ZAR,Unknown Vendor,Other,Online,Desktop,Moscow,Declined,True,2
+A150,Facebook,67,3.0,Neutral,T0159,2025-02-27 10:51:00,2754.19,ZAR,Uber,Transport,App,Mobile,Bloemfontein,Approved,False,1
+A150,Facebook,67,3.0,Neutral,T0160,2025-03-02 21:16:00,18491.95,ZAR,Wire Transfer,Finance,Online,Desktop,Moscow,Approved,False,1
+A150,Facebook,67,3.0,Neutral,T0161,2025-01-29 02:25:00,1989.49,ZAR,Mr Price,Clothing,Card,Desktop,Johannesburg,Approved,False,1
+A150,Facebook,67,3.0,Neutral,T0162,2025-03-26 10:08:00,1818.93,ZAR,Shell,Fuel,Card,Mobile,Port Elizabeth,Approved,False,1
+A118,Facebook,76,3.9,Negative,T0054,2025-01-02 15:06:00,14347.63,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Approved,False,0
+A118,Facebook,76,3.9,Negative,T0055,2025-02-17 18:36:00,20936.34,ZAR,Crypto Exchange,Finance,Online,Desktop,Lagos,Declined,True,0
+A118,Facebook,76,3.9,Negative,T0056,2025-02-03 22:25:00,17062.14,ZAR,Gift Cards Online,Other,Online,Mobile,Unknown,Declined,True,0
+A118,Facebook,76,3.9,Negative,T0057,2025-02-10 12:14:00,3042.84,ZAR,Travelstart,Travel,Online,Mobile,Johannesburg,Approved,False,0
+A118,Facebook,76,3.9,Negative,T0058,2025-03-15 23:06:00,2623.75,ZAR,Uber,Transport,App,Desktop,Bloemfontein,Approved,False,0
+A120,Facebook,83,1.4,Positive,T0059,2025-01-18 19:19:00,554.3,ZAR,Mr Price,Clothing,Card,Mobile,Soweto,Approved,False,2
+A120,Facebook,83,1.4,Positive,T0060,2025-01-15 06:34:00,23419.41,ZAR,Gift Cards Online,Other,Online,Mobile,Unknown,Declined,True,2
+A104,Twitter,76,1.6,Negative,T0014,2025-03-02 15:28:00,445.13,ZAR,Woolworths,Retail,Card,Desktop,Pretoria,Approved,False,0
+A104,Twitter,76,1.6,Negative,T0015,2025-02-27 13:33:00,2689.25,ZAR,Nandos,Food,Card,Mobile,Soweto,Approved,False,0
+A181,Twitter,66,2.1,Positive,T0260,2025-01-13 13:52:00,3130.96,ZAR,Mr Price,Clothing,Card,Desktop,Johannesburg,Approved,False,2
+A181,Twitter,66,2.1,Positive,T0261,2025-02-18 06:04:00,579.66,ZAR,Woolworths,Retail,Card,Desktop,Durban,Approved,False,2
+A191,Facebook,92,2.1,Positive,T0291,2025-03-07 09:46:00,3268.09,ZAR,Dischem,Health,Card,Mobile,Port Elizabeth,Approved,False,2
+A191,Facebook,92,2.1,Positive,T0292,2025-02-04 11:17:00,2009.37,ZAR,Uber,Transport,App,Desktop,Pretoria,Approved,False,2
+A191,Facebook,92,2.1,Positive,T0293,2025-03-29 08:04:00,1156.47,ZAR,Shell,Fuel,Card,Mobile,Pretoria,Approved,False,2
+A191,Facebook,92,2.1,Positive,T0294,2025-02-15 17:58:00,622.92,ZAR,Nandos,Food,Card,Mobile,Cape Town,Approved,False,2
+A191,Facebook,92,2.1,Positive,T0295,2025-02-17 06:31:00,16253.45,ZAR,Gift Cards Online,Other,Online,Desktop,Unknown,Approved,False,2
+A141,TikTok,93,3.9,Negative,T0125,2025-01-27 04:29:00,5892.98,ZAR,Gift Cards Online,Other,Online,Desktop,Unknown,Declined,True,0
+A141,TikTok,93,3.9,Negative,T0126,2025-01-08 06:14:00,1751.85,ZAR,Makro,Wholesale,Card,Desktop,Cape Town,Approved,False,0
+A141,TikTok,93,3.9,Negative,T0127,2025-03-02 19:45:00,17751.77,ZAR,Crypto Exchange,Finance,Online,Desktop,Lagos,Declined,True,0
+A160,LinkedIn,73,2.0,Neutral,T0190,2025-02-16 10:24:00,2796.3,ZAR,Pick n Pay,Groceries,Card,Desktop,Durban,Approved,False,1
+A160,LinkedIn,73,2.0,Neutral,T0191,2025-02-05 03:40:00,3119.31,ZAR,Woolworths,Retail,Card,Mobile,Soweto,Approved,False,1
+A160,LinkedIn,73,2.0,Neutral,T0192,2025-01-17 16:11:00,3367.35,ZAR,Takealot,Ecommerce,Online,Desktop,Johannesburg,Approved,False,1
+A160,LinkedIn,73,2.0,Neutral,T0193,2025-02-12 21:44:00,23251.65,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True,1
+A160,LinkedIn,73,2.0,Neutral,T0194,2025-03-08 15:43:00,12581.05,ZAR,Gift Cards Online,Other,Online,Desktop,Unknown,Declined,True,1
+A160,LinkedIn,73,2.0,Neutral,T0195,2025-03-23 16:51:00,16398.68,ZAR,Unknown Vendor,Other,Online,Desktop,Moscow,Declined,True,1
+A121,LinkedIn,74,3.5,Positive,T0061,2025-01-05 04:10:00,122.96,ZAR,Woolworths,Retail,Card,Desktop,Soweto,Approved,False,2
+A121,LinkedIn,74,3.5,Positive,T0062,2025-03-03 19:23:00,2089.45,ZAR,Pick n Pay,Groceries,Card,Desktop,Pretoria,Approved,False,2
+A121,LinkedIn,74,3.5,Positive,T0063,2025-03-20 19:51:00,1790.62,ZAR,Shell,Fuel,Card,Desktop,Bloemfontein,Approved,False,2
+A121,LinkedIn,74,3.5,Positive,T0064,2025-01-22 05:14:00,676.17,ZAR,Pick n Pay,Groceries,Card,Desktop,Port Elizabeth,Approved,False,2
+A120,Instagram,56,3.0,Positive,T0059,2025-01-18 19:19:00,554.3,ZAR,Mr Price,Clothing,Card,Mobile,Soweto,Approved,False,2
+A120,Instagram,56,3.0,Positive,T0060,2025-01-15 06:34:00,23419.41,ZAR,Gift Cards Online,Other,Online,Mobile,Unknown,Declined,True,2
+A169,TikTok,55,3.3,Positive,T0219,2025-03-28 04:09:00,8271.54,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Declined,True,2
+A169,TikTok,55,3.3,Positive,T0220,2025-01-01 07:54:00,7379.07,ZAR,Gift Cards Online,Other,Online,Desktop,Unknown,Approved,False,2
+A169,TikTok,55,3.3,Positive,T0221,2025-02-17 12:39:00,1431.56,ZAR,Woolworths,Retail,Card,Mobile,Pretoria,Approved,False,2
+A169,TikTok,55,3.3,Positive,T0222,2025-02-03 11:50:00,21366.16,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Approved,False,2
+A100,Twitter,73,4.4,Negative,T0001,2025-03-04 04:05:00,13777.57,ZAR,Unknown Vendor,Other,Online,Desktop,Unknown,Approved,False,0
+A100,Twitter,73,4.4,Negative,T0002,2025-01-12 20:27:00,20222.79,ZAR,Wire Transfer,Finance,Online,Desktop,Lagos,Approved,False,0
+A104,Facebook,82,2.6,Neutral,T0014,2025-03-02 15:28:00,445.13,ZAR,Woolworths,Retail,Card,Desktop,Pretoria,Approved,False,1
+A104,Facebook,82,2.6,Neutral,T0015,2025-02-27 13:33:00,2689.25,ZAR,Nandos,Food,Card,Mobile,Soweto,Approved,False,1
+A111,Instagram,98,4.1,Negative,T0030,2025-01-16 14:47:00,406.74,ZAR,Travelstart,Travel,Online,Mobile,Johannesburg,Approved,False,0
+A111,Instagram,98,4.1,Negative,T0031,2025-02-10 08:36:00,2054.66,ZAR,Shell,Fuel,Card,Desktop,Port Elizabeth,Approved,False,0
+A111,Instagram,98,4.1,Negative,T0032,2025-02-07 11:28:00,3357.03,ZAR,Shell,Fuel,Card,Desktop,Cape Town,Approved,False,0
+A189,LinkedIn,78,2.7,Negative,T0282,2025-01-31 06:55:00,1282.93,ZAR,Uber,Transport,App,Desktop,Cape Town,Approved,False,0
+A189,LinkedIn,78,2.7,Negative,T0283,2025-01-03 22:41:00,3114.86,ZAR,Dischem,Health,Card,Mobile,Johannesburg,Approved,False,0
+A189,LinkedIn,78,2.7,Negative,T0284,2025-02-06 02:11:00,7306.53,ZAR,Unknown Vendor,Other,Online,Desktop,Unknown,Declined,True,0
+A145,Twitter,92,2.4,Neutral,T0135,2025-03-10 15:54:00,17407.15,ZAR,Wire Transfer,Finance,Online,Desktop,Moscow,Declined,True,1
+A145,Twitter,92,2.4,Neutral,T0136,2025-03-20 01:06:00,24264.22,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Approved,False,1
+A145,Twitter,92,2.4,Neutral,T0137,2025-02-28 10:58:00,13801.77,ZAR,Unknown Vendor,Other,Online,Mobile,Moscow,Declined,True,1
+A145,Twitter,92,2.4,Neutral,T0138,2025-03-09 15:20:00,10764.56,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Approved,False,1
+A145,Twitter,92,2.4,Neutral,T0139,2025-03-11 23:29:00,191.27,ZAR,Woolworths,Retail,Card,Desktop,Pretoria,Approved,False,1
+A133,Twitter,71,4.8,Negative,T0097,2025-03-04 19:50:00,23555.91,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Approved,False,0
+A133,Twitter,71,4.8,Negative,T0098,2025-01-12 16:30:00,746.15,ZAR,Pick n Pay,Groceries,Card,Desktop,Cape Town,Approved,False,0
+A133,Twitter,71,4.8,Negative,T0099,2025-01-14 19:44:00,17600.24,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Approved,False,0
+A133,Twitter,71,4.8,Negative,T0100,2025-03-05 12:58:00,984.12,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False,0
+A133,Twitter,71,4.8,Negative,T0101,2025-02-25 00:02:00,238.03,ZAR,Makro,Wholesale,Card,Mobile,Cape Town,Approved,False,0
+A148,Facebook,75,1.7,Neutral,T0150,2025-03-11 09:32:00,1072.45,ZAR,Nandos,Food,Card,Mobile,Port Elizabeth,Approved,False,1
+A148,Facebook,75,1.7,Neutral,T0151,2025-03-19 16:44:00,3491.65,ZAR,Woolworths,Retail,Card,Desktop,Soweto,Approved,False,1
+A148,Facebook,75,1.7,Neutral,T0152,2025-01-20 11:20:00,3207.78,ZAR,Pick n Pay,Groceries,Card,Mobile,Durban,Approved,False,1
+A148,Facebook,75,1.7,Neutral,T0153,2025-02-01 04:33:00,281.73,ZAR,Woolworths,Retail,Card,Mobile,Durban,Approved,False,1
+A148,Facebook,75,1.7,Neutral,T0154,2025-03-21 08:26:00,2239.16,ZAR,Shell,Fuel,Card,Mobile,Pretoria,Approved,False,1
+A148,Facebook,75,1.7,Neutral,T0155,2025-03-30 06:20:00,20039.26,ZAR,Gift Cards Online,Other,Online,Desktop,Moscow,Declined,True,1
+A177,LinkedIn,77,1.4,Positive,T0241,2025-02-06 16:52:00,130.14,ZAR,Travelstart,Travel,Online,Desktop,Pretoria,Approved,False,2
+A177,LinkedIn,77,1.4,Positive,T0242,2025-03-26 20:51:00,1581.6,ZAR,Makro,Wholesale,Card,Mobile,Johannesburg,Approved,False,2
+A177,LinkedIn,77,1.4,Positive,T0243,2025-02-14 10:37:00,1928.69,ZAR,Shell,Fuel,Card,Desktop,Soweto,Approved,False,2
+A177,LinkedIn,77,1.4,Positive,T0244,2025-03-24 22:55:00,892.51,ZAR,Shell,Fuel,Card,Mobile,Durban,Approved,False,2
+A189,TikTok,99,4.1,Neutral,T0282,2025-01-31 06:55:00,1282.93,ZAR,Uber,Transport,App,Desktop,Cape Town,Approved,False,1
+A189,TikTok,99,4.1,Neutral,T0283,2025-01-03 22:41:00,3114.86,ZAR,Dischem,Health,Card,Mobile,Johannesburg,Approved,False,1
+A189,TikTok,99,4.1,Neutral,T0284,2025-02-06 02:11:00,7306.53,ZAR,Unknown Vendor,Other,Online,Desktop,Unknown,Declined,True,1
+A144,Twitter,70,1.3,Positive,T0133,2025-02-07 07:08:00,1596.32,ZAR,Makro,Wholesale,Card,Desktop,Port Elizabeth,Approved,False,2
+A144,Twitter,70,1.3,Positive,T0134,2025-01-16 16:31:00,1009.18,ZAR,Nandos,Food,Card,Desktop,Cape Town,Approved,False,2
+A126,Facebook,98,4.3,Negative,T0075,2025-01-19 14:41:00,2585.38,ZAR,Shell,Fuel,Card,Desktop,Cape Town,Approved,False,0
+A126,Facebook,98,4.3,Negative,T0076,2025-01-09 14:43:00,7642.06,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True,0
+A172,TikTok,56,2.7,Negative,T0223,2025-01-31 01:47:00,11827.74,ZAR,Gift Cards Online,Other,Online,Desktop,Moscow,Declined,True,0
+A172,TikTok,56,2.7,Negative,T0224,2025-03-13 19:12:00,2640.39,ZAR,Makro,Wholesale,Card,Mobile,Soweto,Approved,False,0
+A172,TikTok,56,2.7,Negative,T0225,2025-01-01 13:59:00,13759.79,ZAR,Gift Cards Online,Other,Online,Mobile,Moscow,Declined,True,0
+A172,TikTok,56,2.7,Negative,T0226,2025-02-11 19:07:00,264.12,ZAR,Uber,Transport,App,Mobile,Durban,Approved,False,0
+A172,TikTok,56,2.7,Negative,T0227,2025-02-05 03:55:00,2231.38,ZAR,Takealot,Ecommerce,Online,Desktop,Pretoria,Approved,False,0
+A172,TikTok,56,2.7,Negative,T0228,2025-02-11 07:39:00,2555.32,ZAR,Shell,Fuel,Card,Desktop,Bloemfontein,Approved,False,0
+A125,LinkedIn,66,4.7,Positive,T0072,2025-01-22 07:47:00,2415.81,ZAR,Mr Price,Clothing,Card,Desktop,Durban,Approved,False,2
+A125,LinkedIn,66,4.7,Positive,T0073,2025-03-11 07:27:00,1709.14,ZAR,Travelstart,Travel,Online,Desktop,Port Elizabeth,Approved,False,2
+A125,LinkedIn,66,4.7,Positive,T0074,2025-02-19 12:45:00,18051.75,ZAR,Wire Transfer,Finance,Online,Desktop,Moscow,Approved,False,2
+A146,Twitter,69,3.9,Negative,T0140,2025-01-07 19:38:00,24558.34,ZAR,Gift Cards Online,Other,Online,Mobile,Lagos,Declined,True,0
+A146,Twitter,69,3.9,Negative,T0141,2025-01-24 22:26:00,2817.11,ZAR,Uber,Transport,App,Desktop,Pretoria,Approved,False,0
+A146,Twitter,69,3.9,Negative,T0142,2025-03-27 01:22:00,1335.82,ZAR,Uber,Transport,App,Mobile,Cape Town,Approved,False,0
+A146,Twitter,69,3.9,Negative,T0143,2025-01-01 20:44:00,19265.16,ZAR,Wire Transfer,Finance,Online,Desktop,Moscow,Approved,False,0
+A146,Twitter,69,3.9,Negative,T0144,2025-03-23 05:06:00,218.92,ZAR,Dischem,Health,Card,Desktop,Bloemfontein,Approved,False,0
+A146,Twitter,69,3.9,Negative,T0145,2025-03-27 12:15:00,65.53,ZAR,Uber,Transport,App,Desktop,Port Elizabeth,Approved,False,0
+A185,TikTok,90,3.4,Neutral,T0266,2025-01-28 08:24:00,1653.14,ZAR,Nandos,Food,Card,Mobile,Bloemfontein,Approved,False,1
+A185,TikTok,90,3.4,Neutral,T0267,2025-03-28 02:45:00,2642.64,ZAR,Makro,Wholesale,Card,Mobile,Johannesburg,Approved,False,1
+A185,TikTok,90,3.4,Neutral,T0268,2025-01-04 19:03:00,654.95,ZAR,Shell,Fuel,Card,Mobile,Johannesburg,Approved,False,1
+A185,TikTok,90,3.4,Neutral,T0269,2025-03-30 15:10:00,523.38,ZAR,Travelstart,Travel,Online,Mobile,Port Elizabeth,Approved,False,1
+A155,TikTok,98,4.8,Positive,T0176,2025-03-29 14:54:00,1617.88,ZAR,Uber,Transport,App,Desktop,Port Elizabeth,Approved,False,2
+A155,TikTok,98,4.8,Positive,T0177,2025-01-14 07:32:00,2855.4,ZAR,Woolworths,Retail,Card,Desktop,Durban,Approved,False,2
+A155,TikTok,98,4.8,Positive,T0178,2025-02-16 09:38:00,796.43,ZAR,Woolworths,Retail,Card,Mobile,Soweto,Approved,False,2
+A193,TikTok,69,2.6,Negative,T0302,2025-03-13 20:51:00,3374.35,ZAR,Uber,Transport,App,Mobile,Port Elizabeth,Approved,False,0
+A193,TikTok,69,2.6,Negative,T0303,2025-01-11 02:23:00,22562.95,ZAR,Wire Transfer,Finance,Online,Desktop,Lagos,Declined,True,0
+A193,TikTok,69,2.6,Negative,T0304,2025-02-27 23:43:00,1997.15,ZAR,Nandos,Food,Card,Desktop,Pretoria,Approved,False,0
+A193,TikTok,69,2.6,Negative,T0305,2025-01-12 02:52:00,12399.69,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True,0
+A162,Twitter,71,4.8,Positive,T0196,2025-02-08 17:27:00,755.17,ZAR,Nandos,Food,Card,Mobile,Cape Town,Approved,False,2
+A162,Twitter,71,4.8,Positive,T0197,2025-03-14 17:55:00,1351.15,ZAR,Takealot,Ecommerce,Online,Desktop,Port Elizabeth,Approved,False,2
+A162,Twitter,71,4.8,Positive,T0198,2025-02-01 14:34:00,1151.01,ZAR,Makro,Wholesale,Card,Desktop,Durban,Approved,False,2
+A162,Twitter,71,4.8,Positive,T0199,2025-02-21 22:30:00,2126.12,ZAR,Dischem,Health,Card,Mobile,Durban,Approved,False,2
+A162,Twitter,71,4.8,Positive,T0200,2025-02-02 09:46:00,1351.36,ZAR,Pick n Pay,Groceries,Card,Mobile,Johannesburg,Approved,False,2
+A147,Twitter,77,1.5,Neutral,T0146,2025-03-22 14:40:00,1434.68,ZAR,Pick n Pay,Groceries,Card,Mobile,Soweto,Approved,False,1
+A147,Twitter,77,1.5,Neutral,T0147,2025-02-01 18:51:00,2992.09,ZAR,Uber,Transport,App,Desktop,Pretoria,Approved,False,1
+A147,Twitter,77,1.5,Neutral,T0148,2025-02-05 02:16:00,2086.6,ZAR,Shell,Fuel,Card,Desktop,Pretoria,Approved,False,1
+A147,Twitter,77,1.5,Neutral,T0149,2025-01-31 10:43:00,8751.87,ZAR,Gift Cards Online,Other,Online,Mobile,Moscow,Declined,True,1
+A160,Instagram,89,2.9,Neutral,T0190,2025-02-16 10:24:00,2796.3,ZAR,Pick n Pay,Groceries,Card,Desktop,Durban,Approved,False,1
+A160,Instagram,89,2.9,Neutral,T0191,2025-02-05 03:40:00,3119.31,ZAR,Woolworths,Retail,Card,Mobile,Soweto,Approved,False,1
+A160,Instagram,89,2.9,Neutral,T0192,2025-01-17 16:11:00,3367.35,ZAR,Takealot,Ecommerce,Online,Desktop,Johannesburg,Approved,False,1
+A160,Instagram,89,2.9,Neutral,T0193,2025-02-12 21:44:00,23251.65,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True,1
+A160,Instagram,89,2.9,Neutral,T0194,2025-03-08 15:43:00,12581.05,ZAR,Gift Cards Online,Other,Online,Desktop,Unknown,Declined,True,1
+A160,Instagram,89,2.9,Neutral,T0195,2025-03-23 16:51:00,16398.68,ZAR,Unknown Vendor,Other,Online,Desktop,Moscow,Declined,True,1
+A180,LinkedIn,98,2.1,Negative,T0254,2025-02-15 13:14:00,1511.06,ZAR,Makro,Wholesale,Card,Desktop,Johannesburg,Approved,False,0
+A180,LinkedIn,98,2.1,Negative,T0255,2025-01-01 23:01:00,2301.77,ZAR,Shell,Fuel,Card,Desktop,Soweto,Approved,False,0
+A180,LinkedIn,98,2.1,Negative,T0256,2025-03-03 17:07:00,378.44,ZAR,Pick n Pay,Groceries,Card,Desktop,Pretoria,Approved,False,0
+A180,LinkedIn,98,2.1,Negative,T0257,2025-01-17 10:12:00,1641.17,ZAR,Shell,Fuel,Card,Mobile,Durban,Approved,False,0
+A180,LinkedIn,98,2.1,Negative,T0258,2025-01-30 18:40:00,1269.02,ZAR,Dischem,Health,Card,Desktop,Soweto,Approved,False,0
+A180,LinkedIn,98,2.1,Negative,T0259,2025-01-22 17:42:00,13333.32,ZAR,Gift Cards Online,Other,Online,Desktop,Moscow,Declined,True,0
+A125,Facebook,56,3.2,Neutral,T0072,2025-01-22 07:47:00,2415.81,ZAR,Mr Price,Clothing,Card,Desktop,Durban,Approved,False,1
+A125,Facebook,56,3.2,Neutral,T0073,2025-03-11 07:27:00,1709.14,ZAR,Travelstart,Travel,Online,Desktop,Port Elizabeth,Approved,False,1
+A125,Facebook,56,3.2,Neutral,T0074,2025-02-19 12:45:00,18051.75,ZAR,Wire Transfer,Finance,Online,Desktop,Moscow,Approved,False,1
+A135,TikTok,50,1.6,Positive,T0102,2025-02-03 02:46:00,647.29,ZAR,Mr Price,Clothing,Card,Mobile,Soweto,Approved,False,2
+A135,TikTok,50,1.6,Positive,T0103,2025-02-18 18:15:00,1632.03,ZAR,Dischem,Health,Card,Desktop,Port Elizabeth,Approved,False,2
+A135,TikTok,50,1.6,Positive,T0104,2025-02-18 07:25:00,7902.61,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Approved,False,2
+A135,TikTok,50,1.6,Positive,T0105,2025-02-09 22:09:00,2289.85,ZAR,Nandos,Food,Card,Mobile,Soweto,Approved,False,2
+A135,TikTok,50,1.6,Positive,T0106,2025-03-24 11:07:00,1443.92,ZAR,Mr Price,Clothing,Card,Mobile,Pretoria,Approved,False,2
+A135,TikTok,50,1.6,Positive,T0107,2025-02-25 10:47:00,10561.51,ZAR,Wire Transfer,Finance,Online,Desktop,Unknown,Declined,True,2
+A100,Instagram,81,4.4,Neutral,T0001,2025-03-04 04:05:00,13777.57,ZAR,Unknown Vendor,Other,Online,Desktop,Unknown,Approved,False,1
+A100,Instagram,81,4.4,Neutral,T0002,2025-01-12 20:27:00,20222.79,ZAR,Wire Transfer,Finance,Online,Desktop,Lagos,Approved,False,1
+A107,Facebook,62,4.4,Positive,T0022,2025-02-24 08:57:00,2224.47,ZAR,Uber,Transport,App,Mobile,Durban,Approved,False,2
+A107,Facebook,62,4.4,Positive,T0023,2025-02-02 21:29:00,3368.55,ZAR,Shell,Fuel,Card,Desktop,Cape Town,Approved,False,2
+A107,Facebook,62,4.4,Positive,T0024,2025-01-24 18:15:00,3393.66,ZAR,Mr Price,Clothing,Card,Desktop,Johannesburg,Approved,False,2
+A198,Instagram,79,4.8,Positive,T0322,2025-01-09 17:04:00,1400.7,ZAR,Dischem,Health,Card,Desktop,Cape Town,Approved,False,2
+A198,Instagram,79,4.8,Positive,T0323,2025-02-25 02:02:00,13921.46,ZAR,Unknown Vendor,Other,Online,Mobile,Moscow,Approved,False,2
+A198,Instagram,79,4.8,Positive,T0324,2025-03-29 19:13:00,760.08,ZAR,Takealot,Ecommerce,Online,Mobile,Johannesburg,Approved,False,2
+A151,Twitter,72,1.6,Neutral,T0163,2025-01-23 13:03:00,7060.05,ZAR,Wire Transfer,Finance,Online,Desktop,Unknown,Declined,True,1
+A151,Twitter,72,1.6,Neutral,T0164,2025-01-29 01:03:00,1830.5,ZAR,Mr Price,Clothing,Card,Desktop,Bloemfontein,Approved,False,1
+A151,Twitter,72,1.6,Neutral,T0165,2025-01-06 21:41:00,1376.54,ZAR,Woolworths,Retail,Card,Mobile,Bloemfontein,Approved,False,1
+A151,Twitter,72,1.6,Neutral,T0166,2025-02-05 05:24:00,1092.15,ZAR,Takealot,Ecommerce,Online,Mobile,Pretoria,Approved,False,1
+A151,Twitter,72,1.6,Neutral,T0167,2025-03-19 03:00:00,436.64,ZAR,Pick n Pay,Groceries,Card,Mobile,Durban,Approved,False,1
+A151,Twitter,72,1.6,Neutral,T0168,2025-01-30 09:25:00,1738.78,ZAR,Nandos,Food,Card,Desktop,Cape Town,Approved,False,1
+A178,TikTok,68,3.5,Negative,T0245,2025-01-21 18:06:00,19899.83,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Approved,False,0
+A178,TikTok,68,3.5,Negative,T0246,2025-02-24 15:38:00,878.78,ZAR,Makro,Wholesale,Card,Mobile,Pretoria,Approved,False,0
+A178,TikTok,68,3.5,Negative,T0247,2025-02-02 09:17:00,2071.57,ZAR,Shell,Fuel,Card,Mobile,Johannesburg,Approved,False,0
+A178,TikTok,68,3.5,Negative,T0248,2025-02-21 04:21:00,3018.97,ZAR,Travelstart,Travel,Online,Mobile,Bloemfontein,Approved,False,0
+A178,TikTok,68,3.5,Negative,T0249,2025-01-13 20:14:00,2801.41,ZAR,Pick n Pay,Groceries,Card,Mobile,Durban,Approved,False,0
+A178,TikTok,68,3.5,Negative,T0250,2025-01-11 09:27:00,449.18,ZAR,Travelstart,Travel,Online,Desktop,Bloemfontein,Approved,False,0
+A146,Facebook,81,2.9,Neutral,T0140,2025-01-07 19:38:00,24558.34,ZAR,Gift Cards Online,Other,Online,Mobile,Lagos,Declined,True,1
+A146,Facebook,81,2.9,Neutral,T0141,2025-01-24 22:26:00,2817.11,ZAR,Uber,Transport,App,Desktop,Pretoria,Approved,False,1
+A146,Facebook,81,2.9,Neutral,T0142,2025-03-27 01:22:00,1335.82,ZAR,Uber,Transport,App,Mobile,Cape Town,Approved,False,1
+A146,Facebook,81,2.9,Neutral,T0143,2025-01-01 20:44:00,19265.16,ZAR,Wire Transfer,Finance,Online,Desktop,Moscow,Approved,False,1
+A146,Facebook,81,2.9,Neutral,T0144,2025-03-23 05:06:00,218.92,ZAR,Dischem,Health,Card,Desktop,Bloemfontein,Approved,False,1
+A146,Facebook,81,2.9,Neutral,T0145,2025-03-27 12:15:00,65.53,ZAR,Uber,Transport,App,Desktop,Port Elizabeth,Approved,False,1
+A155,Facebook,79,2.4,Positive,T0176,2025-03-29 14:54:00,1617.88,ZAR,Uber,Transport,App,Desktop,Port Elizabeth,Approved,False,2
+A155,Facebook,79,2.4,Positive,T0177,2025-01-14 07:32:00,2855.4,ZAR,Woolworths,Retail,Card,Desktop,Durban,Approved,False,2
+A155,Facebook,79,2.4,Positive,T0178,2025-02-16 09:38:00,796.43,ZAR,Woolworths,Retail,Card,Mobile,Soweto,Approved,False,2
+A185,Facebook,78,2.4,Positive,T0266,2025-01-28 08:24:00,1653.14,ZAR,Nandos,Food,Card,Mobile,Bloemfontein,Approved,False,2
+A185,Facebook,78,2.4,Positive,T0267,2025-03-28 02:45:00,2642.64,ZAR,Makro,Wholesale,Card,Mobile,Johannesburg,Approved,False,2
+A185,Facebook,78,2.4,Positive,T0268,2025-01-04 19:03:00,654.95,ZAR,Shell,Fuel,Card,Mobile,Johannesburg,Approved,False,2
+A185,Facebook,78,2.4,Positive,T0269,2025-03-30 15:10:00,523.38,ZAR,Travelstart,Travel,Online,Mobile,Port Elizabeth,Approved,False,2
+A113,Facebook,98,2.7,Neutral,T0035,2025-01-01 21:32:00,5432.24,ZAR,Crypto Exchange,Finance,Online,Mobile,Lagos,Approved,False,1
+A113,Facebook,98,2.7,Neutral,T0036,2025-03-01 16:07:00,424.59,ZAR,Shell,Fuel,Card,Mobile,Pretoria,Approved,False,1
+A113,Facebook,98,2.7,Neutral,T0037,2025-03-26 18:19:00,2558.13,ZAR,Uber,Transport,App,Mobile,Soweto,Approved,False,1
+A113,Facebook,98,2.7,Neutral,T0038,2025-01-22 00:08:00,844.24,ZAR,Makro,Wholesale,Card,Desktop,Port Elizabeth,Approved,False,1
+A189,Facebook,94,3.8,Negative,T0282,2025-01-31 06:55:00,1282.93,ZAR,Uber,Transport,App,Desktop,Cape Town,Approved,False,0
+A189,Facebook,94,3.8,Negative,T0283,2025-01-03 22:41:00,3114.86,ZAR,Dischem,Health,Card,Mobile,Johannesburg,Approved,False,0
+A189,Facebook,94,3.8,Negative,T0284,2025-02-06 02:11:00,7306.53,ZAR,Unknown Vendor,Other,Online,Desktop,Unknown,Declined,True,0
+A127,Instagram,78,3.4,Negative,T0077,2025-03-28 23:10:00,524.06,ZAR,Nandos,Food,Card,Desktop,Port Elizabeth,Approved,False,0
+A127,Instagram,78,3.4,Negative,T0078,2025-03-31 19:55:00,2750.05,ZAR,Dischem,Health,Card,Desktop,Soweto,Approved,False,0
+A186,TikTok,79,2.8,Positive,T0270,2025-03-29 22:52:00,3069.04,ZAR,Dischem,Health,Card,Mobile,Port Elizabeth,Approved,False,2
+A186,TikTok,79,2.8,Positive,T0271,2025-03-01 22:17:00,811.75,ZAR,Takealot,Ecommerce,Online,Mobile,Pretoria,Approved,False,2
+A186,TikTok,79,2.8,Positive,T0272,2025-03-16 08:42:00,16328.41,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Declined,True,2
+A186,TikTok,79,2.8,Positive,T0273,2025-02-24 08:29:00,220.63,ZAR,Pick n Pay,Groceries,Card,Desktop,Port Elizabeth,Approved,False,2
+A186,TikTok,79,2.8,Positive,T0274,2025-03-10 02:49:00,1494.36,ZAR,Uber,Transport,App,Mobile,Johannesburg,Approved,False,2
+A186,TikTok,79,2.8,Positive,T0275,2025-01-25 03:31:00,1379.52,ZAR,Nandos,Food,Card,Mobile,Bloemfontein,Approved,False,2
+A177,Twitter,65,1.3,Positive,T0241,2025-02-06 16:52:00,130.14,ZAR,Travelstart,Travel,Online,Desktop,Pretoria,Approved,False,2
+A177,Twitter,65,1.3,Positive,T0242,2025-03-26 20:51:00,1581.6,ZAR,Makro,Wholesale,Card,Mobile,Johannesburg,Approved,False,2
+A177,Twitter,65,1.3,Positive,T0243,2025-02-14 10:37:00,1928.69,ZAR,Shell,Fuel,Card,Desktop,Soweto,Approved,False,2
+A177,Twitter,65,1.3,Positive,T0244,2025-03-24 22:55:00,892.51,ZAR,Shell,Fuel,Card,Mobile,Durban,Approved,False,2
+A187,Twitter,89,1.3,Negative,T0276,2025-03-17 01:21:00,2384.45,ZAR,Mr Price,Clothing,Card,Mobile,Pretoria,Approved,False,0
+A187,Twitter,89,1.3,Negative,T0277,2025-03-11 15:46:00,3136.06,ZAR,Pick n Pay,Groceries,Card,Mobile,Johannesburg,Approved,False,0
+A187,Twitter,89,1.3,Negative,T0278,2025-03-17 22:28:00,14399.12,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Declined,True,0
+A101,Twitter,68,1.0,Neutral,T0003,2025-02-06 19:32:00,2271.33,ZAR,Takealot,Ecommerce,Online,Mobile,Port Elizabeth,Approved,False,1
+A101,Twitter,68,1.0,Neutral,T0004,2025-03-21 01:51:00,1963.32,ZAR,Mr Price,Clothing,Card,Desktop,Johannesburg,Approved,False,1
+A101,Twitter,68,1.0,Neutral,T0005,2025-03-05 08:04:00,2665.4,ZAR,Uber,Transport,App,Desktop,Soweto,Approved,False,1
+A125,Twitter,67,4.9,Positive,T0072,2025-01-22 07:47:00,2415.81,ZAR,Mr Price,Clothing,Card,Desktop,Durban,Approved,False,2
+A125,Twitter,67,4.9,Positive,T0073,2025-03-11 07:27:00,1709.14,ZAR,Travelstart,Travel,Online,Desktop,Port Elizabeth,Approved,False,2
+A125,Twitter,67,4.9,Positive,T0074,2025-02-19 12:45:00,18051.75,ZAR,Wire Transfer,Finance,Online,Desktop,Moscow,Approved,False,2
+A113,Instagram,50,1.0,Positive,T0035,2025-01-01 21:32:00,5432.24,ZAR,Crypto Exchange,Finance,Online,Mobile,Lagos,Approved,False,2
+A113,Instagram,50,1.0,Positive,T0036,2025-03-01 16:07:00,424.59,ZAR,Shell,Fuel,Card,Mobile,Pretoria,Approved,False,2
+A113,Instagram,50,1.0,Positive,T0037,2025-03-26 18:19:00,2558.13,ZAR,Uber,Transport,App,Mobile,Soweto,Approved,False,2
+A113,Instagram,50,1.0,Positive,T0038,2025-01-22 00:08:00,844.24,ZAR,Makro,Wholesale,Card,Desktop,Port Elizabeth,Approved,False,2
+A158,LinkedIn,63,1.4,Negative,T0185,2025-02-10 14:07:00,224.29,ZAR,Takealot,Ecommerce,Online,Mobile,Johannesburg,Approved,False,0
+A158,LinkedIn,63,1.4,Negative,T0186,2025-01-18 00:03:00,2935.05,ZAR,Shell,Fuel,Card,Desktop,Soweto,Approved,False,0
+A158,LinkedIn,63,1.4,Negative,T0187,2025-03-17 06:37:00,3064.92,ZAR,Takealot,Ecommerce,Online,Desktop,Johannesburg,Approved,False,0
+A158,LinkedIn,63,1.4,Negative,T0188,2025-03-09 16:31:00,1416.77,ZAR,Takealot,Ecommerce,Online,Desktop,Pretoria,Approved,False,0
+A158,LinkedIn,63,1.4,Negative,T0189,2025-01-14 10:55:00,20168.44,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Approved,False,0
+A155,TikTok,96,2.3,Neutral,T0176,2025-03-29 14:54:00,1617.88,ZAR,Uber,Transport,App,Desktop,Port Elizabeth,Approved,False,1
+A155,TikTok,96,2.3,Neutral,T0177,2025-01-14 07:32:00,2855.4,ZAR,Woolworths,Retail,Card,Desktop,Durban,Approved,False,1
+A155,TikTok,96,2.3,Neutral,T0178,2025-02-16 09:38:00,796.43,ZAR,Woolworths,Retail,Card,Mobile,Soweto,Approved,False,1
+A106,Facebook,99,4.2,Negative,T0020,2025-02-11 17:09:00,2542.14,ZAR,Woolworths,Retail,Card,Desktop,Soweto,Approved,False,0
+A106,Facebook,99,4.2,Negative,T0021,2025-03-04 11:26:00,575.48,ZAR,Nandos,Food,Card,Mobile,Pretoria,Approved,False,0
+A102,LinkedIn,51,4.8,Neutral,T0006,2025-02-12 11:02:00,20567.67,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True,1
+A102,LinkedIn,51,4.8,Neutral,T0007,2025-03-09 08:58:00,2406.52,ZAR,Takealot,Ecommerce,Online,Mobile,Port Elizabeth,Approved,False,1
+A102,LinkedIn,51,4.8,Neutral,T0008,2025-02-12 19:11:00,1328.09,ZAR,Shell,Fuel,Card,Mobile,Cape Town,Approved,False,1
+A102,LinkedIn,51,4.8,Neutral,T0009,2025-01-21 13:40:00,1691.18,ZAR,Woolworths,Retail,Card,Desktop,Durban,Approved,False,1
+A122,Twitter,77,4.2,Neutral,T0065,2025-03-25 12:53:00,5985.08,ZAR,Wire Transfer,Finance,Online,Mobile,Lagos,Declined,True,1
+A122,Twitter,77,4.2,Neutral,T0066,2025-02-06 22:41:00,229.27,ZAR,Woolworths,Retail,Card,Mobile,Bloemfontein,Approved,False,1
+A122,Twitter,77,4.2,Neutral,T0067,2025-01-29 19:34:00,23053.06,ZAR,Crypto Exchange,Finance,Online,Desktop,Moscow,Approved,False,1
+A122,Twitter,77,4.2,Neutral,T0068,2025-03-08 03:49:00,2737.54,ZAR,Makro,Wholesale,Card,Desktop,Soweto,Approved,False,1
+A117,LinkedIn,98,3.8,Neutral,T0051,2025-01-29 22:31:00,14771.68,ZAR,Wire Transfer,Finance,Online,Mobile,Unknown,Declined,True,1
+A117,LinkedIn,98,3.8,Neutral,T0052,2025-01-14 15:50:00,5497.19,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Declined,True,1
+A117,LinkedIn,98,3.8,Neutral,T0053,2025-01-15 14:10:00,13382.29,ZAR,Unknown Vendor,Other,Online,Desktop,Unknown,Approved,False,1
+A137,TikTok,99,3.1,Positive,T0108,2025-02-06 20:13:00,1470.75,ZAR,Makro,Wholesale,Card,Desktop,Johannesburg,Approved,False,2
+A137,TikTok,99,3.1,Positive,T0109,2025-01-04 07:25:00,1143.79,ZAR,Makro,Wholesale,Card,Mobile,Port Elizabeth,Approved,False,2
+A137,TikTok,99,3.1,Positive,T0110,2025-02-21 08:33:00,828.3,ZAR,Mr Price,Clothing,Card,Desktop,Cape Town,Approved,False,2
+A137,TikTok,99,3.1,Positive,T0111,2025-02-28 14:18:00,2285.42,ZAR,Travelstart,Travel,Online,Mobile,Soweto,Approved,False,2
+A198,Facebook,79,1.3,Negative,T0322,2025-01-09 17:04:00,1400.7,ZAR,Dischem,Health,Card,Desktop,Cape Town,Approved,False,0
+A198,Facebook,79,1.3,Negative,T0323,2025-02-25 02:02:00,13921.46,ZAR,Unknown Vendor,Other,Online,Mobile,Moscow,Approved,False,0
+A198,Facebook,79,1.3,Negative,T0324,2025-03-29 19:13:00,760.08,ZAR,Takealot,Ecommerce,Online,Mobile,Johannesburg,Approved,False,0
+A114,Facebook,87,4.8,Negative,T0039,2025-03-14 23:19:00,2912.77,ZAR,Dischem,Health,Card,Mobile,Pretoria,Approved,False,0
+A114,Facebook,87,4.8,Negative,T0040,2025-01-24 23:56:00,10818.36,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Declined,True,0
+A114,Facebook,87,4.8,Negative,T0041,2025-02-09 23:59:00,204.94,ZAR,Takealot,Ecommerce,Online,Mobile,Durban,Approved,False,0
+A114,Facebook,87,4.8,Negative,T0042,2025-03-22 02:31:00,19972.16,ZAR,Gift Cards Online,Other,Online,Mobile,Unknown,Approved,False,0
+A163,TikTok,53,4.0,Neutral,T0201,2025-01-31 00:57:00,2411.74,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False,1
+A163,TikTok,53,4.0,Neutral,T0202,2025-03-09 14:52:00,391.29,ZAR,Uber,Transport,App,Mobile,Pretoria,Approved,False,1
+A163,TikTok,53,4.0,Neutral,T0203,2025-01-17 11:31:00,747.2,ZAR,Uber,Transport,App,Mobile,Port Elizabeth,Approved,False,1
+A188,TikTok,50,3.6,Positive,T0279,2025-01-18 07:40:00,2070.91,ZAR,Uber,Transport,App,Mobile,Pretoria,Approved,False,2
+A188,TikTok,50,3.6,Positive,T0280,2025-01-19 02:25:00,392.09,ZAR,Takealot,Ecommerce,Online,Desktop,Durban,Approved,False,2
+A188,TikTok,50,3.6,Positive,T0281,2025-03-19 04:19:00,514.69,ZAR,Takealot,Ecommerce,Online,Mobile,Soweto,Approved,False,2
+A127,Twitter,57,4.0,Positive,T0077,2025-03-28 23:10:00,524.06,ZAR,Nandos,Food,Card,Desktop,Port Elizabeth,Approved,False,2
+A127,Twitter,57,4.0,Positive,T0078,2025-03-31 19:55:00,2750.05,ZAR,Dischem,Health,Card,Desktop,Soweto,Approved,False,2
+A173,Facebook,78,3.9,Negative,T0229,2025-02-17 08:33:00,3327.71,ZAR,Woolworths,Retail,Card,Mobile,Pretoria,Approved,False,0
+A173,Facebook,78,3.9,Negative,T0230,2025-02-22 00:59:00,2968.73,ZAR,Woolworths,Retail,Card,Mobile,Soweto,Approved,False,0
+A173,Facebook,78,3.9,Negative,T0231,2025-01-25 23:27:00,2636.18,ZAR,Shell,Fuel,Card,Desktop,Port Elizabeth,Approved,False,0
+A173,Facebook,78,3.9,Negative,T0232,2025-03-06 08:44:00,11049.61,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Approved,False,0
+A138,LinkedIn,88,3.5,Positive,T0112,2025-02-17 15:31:00,1538.39,ZAR,Shell,Fuel,Card,Mobile,Pretoria,Approved,False,2
+A138,LinkedIn,88,3.5,Positive,T0113,2025-01-12 22:51:00,19734.11,ZAR,Wire Transfer,Finance,Online,Desktop,Lagos,Approved,False,2
+A138,LinkedIn,88,3.5,Positive,T0114,2025-02-16 20:23:00,20997.41,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Declined,True,2
+A138,LinkedIn,88,3.5,Positive,T0115,2025-03-20 20:49:00,298.6,ZAR,Pick n Pay,Groceries,Card,Mobile,Cape Town,Approved,False,2
+A138,LinkedIn,88,3.5,Positive,T0116,2025-02-13 04:43:00,1202.75,ZAR,Woolworths,Retail,Card,Mobile,Johannesburg,Approved,False,2
+A156,Instagram,52,4.9,Positive,T0179,2025-02-01 09:01:00,152.93,ZAR,Woolworths,Retail,Card,Desktop,Bloemfontein,Approved,False,2
+A156,Instagram,52,4.9,Positive,T0180,2025-03-05 07:44:00,2551.88,ZAR,Takealot,Ecommerce,Online,Desktop,Bloemfontein,Approved,False,2
+A156,Instagram,52,4.9,Positive,T0181,2025-02-23 05:07:00,3120.57,ZAR,Shell,Fuel,Card,Desktop,Johannesburg,Approved,False,2
+A156,Instagram,52,4.9,Positive,T0182,2025-01-16 19:30:00,2441.18,ZAR,Takealot,Ecommerce,Online,Mobile,Cape Town,Approved,False,2
+A156,Instagram,52,4.9,Positive,T0183,2025-03-31 13:35:00,5080.15,ZAR,Wire Transfer,Finance,Online,Mobile,Lagos,Declined,True,2
+A156,Instagram,52,4.9,Positive,T0184,2025-03-21 09:32:00,3145.69,ZAR,Woolworths,Retail,Card,Mobile,Cape Town,Approved,False,2
+A116,Instagram,81,4.6,Neutral,T0046,2025-03-11 07:58:00,8928.69,ZAR,Gift Cards Online,Other,Online,Mobile,Moscow,Declined,True,1
+A116,Instagram,81,4.6,Neutral,T0047,2025-01-02 04:13:00,546.45,ZAR,Nandos,Food,Card,Mobile,Port Elizabeth,Approved,False,1
+A116,Instagram,81,4.6,Neutral,T0048,2025-01-11 07:30:00,2387.92,ZAR,Woolworths,Retail,Card,Desktop,Port Elizabeth,Approved,False,1
+A116,Instagram,81,4.6,Neutral,T0049,2025-01-18 20:48:00,2054.85,ZAR,Travelstart,Travel,Online,Mobile,Durban,Approved,False,1
+A116,Instagram,81,4.6,Neutral,T0050,2025-01-12 13:55:00,19779.68,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Declined,True,1
+A185,TikTok,59,3.6,Positive,T0266,2025-01-28 08:24:00,1653.14,ZAR,Nandos,Food,Card,Mobile,Bloemfontein,Approved,False,2
+A185,TikTok,59,3.6,Positive,T0267,2025-03-28 02:45:00,2642.64,ZAR,Makro,Wholesale,Card,Mobile,Johannesburg,Approved,False,2
+A185,TikTok,59,3.6,Positive,T0268,2025-01-04 19:03:00,654.95,ZAR,Shell,Fuel,Card,Mobile,Johannesburg,Approved,False,2
+A185,TikTok,59,3.6,Positive,T0269,2025-03-30 15:10:00,523.38,ZAR,Travelstart,Travel,Online,Mobile,Port Elizabeth,Approved,False,2
+A189,Twitter,59,3.8,Neutral,T0282,2025-01-31 06:55:00,1282.93,ZAR,Uber,Transport,App,Desktop,Cape Town,Approved,False,1
+A189,Twitter,59,3.8,Neutral,T0283,2025-01-03 22:41:00,3114.86,ZAR,Dischem,Health,Card,Mobile,Johannesburg,Approved,False,1
+A189,Twitter,59,3.8,Neutral,T0284,2025-02-06 02:11:00,7306.53,ZAR,Unknown Vendor,Other,Online,Desktop,Unknown,Declined,True,1
+A143,Instagram,68,1.2,Negative,T0130,2025-01-31 13:29:00,2983.45,ZAR,Makro,Wholesale,Card,Desktop,Durban,Approved,False,0
+A143,Instagram,68,1.2,Negative,T0131,2025-02-05 23:55:00,412.18,ZAR,Nandos,Food,Card,Desktop,Cape Town,Approved,False,0
+A143,Instagram,68,1.2,Negative,T0132,2025-01-31 07:11:00,662.4,ZAR,Makro,Wholesale,Card,Mobile,Cape Town,Approved,False,0
+A124,Facebook,95,3.7,Positive,T0069,2025-02-11 18:23:00,3008.62,ZAR,Nandos,Food,Card,Desktop,Bloemfontein,Approved,False,2
+A124,Facebook,95,3.7,Positive,T0070,2025-01-13 10:28:00,969.3,ZAR,Makro,Wholesale,Card,Mobile,Cape Town,Approved,False,2
+A124,Facebook,95,3.7,Positive,T0071,2025-02-03 12:21:00,852.37,ZAR,Dischem,Health,Card,Desktop,Durban,Approved,False,2
+A116,TikTok,83,1.2,Negative,T0046,2025-03-11 07:58:00,8928.69,ZAR,Gift Cards Online,Other,Online,Mobile,Moscow,Declined,True,0
+A116,TikTok,83,1.2,Negative,T0047,2025-01-02 04:13:00,546.45,ZAR,Nandos,Food,Card,Mobile,Port Elizabeth,Approved,False,0
+A116,TikTok,83,1.2,Negative,T0048,2025-01-11 07:30:00,2387.92,ZAR,Woolworths,Retail,Card,Desktop,Port Elizabeth,Approved,False,0
+A116,TikTok,83,1.2,Negative,T0049,2025-01-18 20:48:00,2054.85,ZAR,Travelstart,Travel,Online,Mobile,Durban,Approved,False,0
+A116,TikTok,83,1.2,Negative,T0050,2025-01-12 13:55:00,19779.68,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Declined,True,0
+A112,LinkedIn,82,3.4,Negative,T0033,2025-02-14 10:56:00,1728.97,ZAR,Woolworths,Retail,Card,Mobile,Soweto,Approved,False,0
+A112,LinkedIn,82,3.4,Negative,T0034,2025-01-25 22:19:00,1683.54,ZAR,Makro,Wholesale,Card,Desktop,Bloemfontein,Approved,False,0
+A183,TikTok,72,5.0,Positive,T0264,2025-03-15 01:05:00,21462.49,ZAR,Gift Cards Online,Other,Online,Mobile,Lagos,Declined,True,2
+A183,TikTok,72,5.0,Positive,T0265,2025-01-24 07:45:00,2595.4,ZAR,Dischem,Health,Card,Mobile,Soweto,Approved,False,2
+A124,LinkedIn,77,3.2,Positive,T0069,2025-02-11 18:23:00,3008.62,ZAR,Nandos,Food,Card,Desktop,Bloemfontein,Approved,False,2
+A124,LinkedIn,77,3.2,Positive,T0070,2025-01-13 10:28:00,969.3,ZAR,Makro,Wholesale,Card,Mobile,Cape Town,Approved,False,2
+A124,LinkedIn,77,3.2,Positive,T0071,2025-02-03 12:21:00,852.37,ZAR,Dischem,Health,Card,Desktop,Durban,Approved,False,2
+A167,TikTok,81,2.9,Negative,T0212,2025-02-06 02:13:00,3298.31,ZAR,Pick n Pay,Groceries,Card,Desktop,Johannesburg,Approved,False,0
+A167,TikTok,81,2.9,Negative,T0213,2025-02-25 04:39:00,10290.8,ZAR,Unknown Vendor,Other,Online,Mobile,Unknown,Approved,False,0
+A167,TikTok,81,2.9,Negative,T0214,2025-03-21 17:08:00,896.14,ZAR,Pick n Pay,Groceries,Card,Desktop,Pretoria,Approved,False,0
+A167,TikTok,81,2.9,Negative,T0215,2025-02-18 12:43:00,1220.66,ZAR,Makro,Wholesale,Card,Mobile,Port Elizabeth,Approved,False,0
+A167,TikTok,81,2.9,Negative,T0216,2025-01-04 22:04:00,606.33,ZAR,Shell,Fuel,Card,Desktop,Johannesburg,Approved,False,0
+A109,TikTok,99,2.3,Positive,T0025,2025-01-09 10:54:00,989.23,ZAR,Mr Price,Clothing,Card,Mobile,Cape Town,Approved,False,2
+A109,TikTok,99,2.3,Positive,T0026,2025-01-28 19:34:00,748.15,ZAR,Mr Price,Clothing,Card,Desktop,Bloemfontein,Approved,False,2
+A109,TikTok,99,2.3,Positive,T0027,2025-03-10 11:43:00,3005.32,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False,2
+A109,TikTok,99,2.3,Positive,T0028,2025-02-22 02:38:00,2214.22,ZAR,Mr Price,Clothing,Card,Desktop,Cape Town,Approved,False,2
+A109,TikTok,99,2.3,Positive,T0029,2025-01-04 04:29:00,1484.54,ZAR,Woolworths,Retail,Card,Mobile,Bloemfontein,Approved,False,2
+A166,TikTok,56,1.5,Neutral,T0208,2025-02-19 10:05:00,1100.41,ZAR,Woolworths,Retail,Card,Desktop,Johannesburg,Approved,False,1
+A166,TikTok,56,1.5,Neutral,T0209,2025-01-15 01:15:00,17335.12,ZAR,Crypto Exchange,Finance,Online,Mobile,Lagos,Declined,True,1
+A166,TikTok,56,1.5,Neutral,T0210,2025-02-22 12:44:00,2989.17,ZAR,Takealot,Ecommerce,Online,Desktop,Durban,Approved,False,1
+A166,TikTok,56,1.5,Neutral,T0211,2025-02-06 02:45:00,1330.82,ZAR,Shell,Fuel,Card,Mobile,Bloemfontein,Approved,False,1
+A117,LinkedIn,78,3.9,Neutral,T0051,2025-01-29 22:31:00,14771.68,ZAR,Wire Transfer,Finance,Online,Mobile,Unknown,Declined,True,1
+A117,LinkedIn,78,3.9,Neutral,T0052,2025-01-14 15:50:00,5497.19,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Declined,True,1
+A117,LinkedIn,78,3.9,Neutral,T0053,2025-01-15 14:10:00,13382.29,ZAR,Unknown Vendor,Other,Online,Desktop,Unknown,Approved,False,1
+A199,LinkedIn,57,1.8,Positive,T0325,2025-01-04 05:33:00,3421.31,ZAR,Travelstart,Travel,Online,Mobile,Port Elizabeth,Approved,False,2
+A199,LinkedIn,57,1.8,Positive,T0326,2025-01-14 04:08:00,268.48,ZAR,Shell,Fuel,Card,Desktop,Johannesburg,Approved,False,2
+A199,LinkedIn,57,1.8,Positive,T0327,2025-03-01 15:47:00,1903.41,ZAR,Dischem,Health,Card,Mobile,Port Elizabeth,Approved,False,2
+A199,LinkedIn,57,1.8,Positive,T0328,2025-02-28 20:37:00,2181.37,ZAR,Nandos,Food,Card,Desktop,Bloemfontein,Approved,False,2
+A185,TikTok,50,1.5,Negative,T0266,2025-01-28 08:24:00,1653.14,ZAR,Nandos,Food,Card,Mobile,Bloemfontein,Approved,False,0
+A185,TikTok,50,1.5,Negative,T0267,2025-03-28 02:45:00,2642.64,ZAR,Makro,Wholesale,Card,Mobile,Johannesburg,Approved,False,0
+A185,TikTok,50,1.5,Negative,T0268,2025-01-04 19:03:00,654.95,ZAR,Shell,Fuel,Card,Mobile,Johannesburg,Approved,False,0
+A185,TikTok,50,1.5,Negative,T0269,2025-03-30 15:10:00,523.38,ZAR,Travelstart,Travel,Online,Mobile,Port Elizabeth,Approved,False,0
+A133,Instagram,52,2.7,Positive,T0097,2025-03-04 19:50:00,23555.91,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Approved,False,2
+A133,Instagram,52,2.7,Positive,T0098,2025-01-12 16:30:00,746.15,ZAR,Pick n Pay,Groceries,Card,Desktop,Cape Town,Approved,False,2
+A133,Instagram,52,2.7,Positive,T0099,2025-01-14 19:44:00,17600.24,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Approved,False,2
+A133,Instagram,52,2.7,Positive,T0100,2025-03-05 12:58:00,984.12,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False,2
+A133,Instagram,52,2.7,Positive,T0101,2025-02-25 00:02:00,238.03,ZAR,Makro,Wholesale,Card,Mobile,Cape Town,Approved,False,2
+A107,Twitter,73,4.2,Positive,T0022,2025-02-24 08:57:00,2224.47,ZAR,Uber,Transport,App,Mobile,Durban,Approved,False,2
+A107,Twitter,73,4.2,Positive,T0023,2025-02-02 21:29:00,3368.55,ZAR,Shell,Fuel,Card,Desktop,Cape Town,Approved,False,2
+A107,Twitter,73,4.2,Positive,T0024,2025-01-24 18:15:00,3393.66,ZAR,Mr Price,Clothing,Card,Desktop,Johannesburg,Approved,False,2
+A139,Twitter,72,4.0,Negative,T0117,2025-03-19 09:22:00,5293.66,ZAR,Unknown Vendor,Other,Online,Desktop,Moscow,Approved,False,0
+A139,Twitter,72,4.0,Negative,T0118,2025-01-11 12:21:00,2122.9,ZAR,Takealot,Ecommerce,Online,Desktop,Soweto,Approved,False,0
+A182,Twitter,57,1.2,Negative,T0262,2025-03-18 18:05:00,1555.29,ZAR,Uber,Transport,App,Mobile,Cape Town,Approved,False,0
+A182,Twitter,57,1.2,Negative,T0263,2025-01-31 04:01:00,2889.79,ZAR,Shell,Fuel,Card,Mobile,Soweto,Approved,False,0
+A141,LinkedIn,96,2.8,Neutral,T0125,2025-01-27 04:29:00,5892.98,ZAR,Gift Cards Online,Other,Online,Desktop,Unknown,Declined,True,1
+A141,LinkedIn,96,2.8,Neutral,T0126,2025-01-08 06:14:00,1751.85,ZAR,Makro,Wholesale,Card,Desktop,Cape Town,Approved,False,1
+A141,LinkedIn,96,2.8,Neutral,T0127,2025-03-02 19:45:00,17751.77,ZAR,Crypto Exchange,Finance,Online,Desktop,Lagos,Declined,True,1
+A140,LinkedIn,86,3.1,Negative,T0119,2025-02-08 07:46:00,2713.76,ZAR,Woolworths,Retail,Card,Desktop,Port Elizabeth,Approved,False,0
+A140,LinkedIn,86,3.1,Negative,T0120,2025-03-25 15:20:00,1388.05,ZAR,Takealot,Ecommerce,Online,Mobile,Soweto,Approved,False,0
+A140,LinkedIn,86,3.1,Negative,T0121,2025-02-12 03:42:00,1861.55,ZAR,Travelstart,Travel,Online,Mobile,Johannesburg,Approved,False,0
+A140,LinkedIn,86,3.1,Negative,T0122,2025-03-28 13:12:00,3462.51,ZAR,Dischem,Health,Card,Desktop,Bloemfontein,Approved,False,0
+A140,LinkedIn,86,3.1,Negative,T0123,2025-03-17 09:19:00,7831.92,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Declined,True,0
+A140,LinkedIn,86,3.1,Negative,T0124,2025-03-24 03:18:00,13675.58,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Declined,True,0
+A105,Instagram,52,3.6,Neutral,T0016,2025-03-30 05:16:00,5616.36,ZAR,Crypto Exchange,Finance,Online,Mobile,Unknown,Declined,True,1
+A105,Instagram,52,3.6,Neutral,T0017,2025-03-19 06:55:00,9678.79,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Declined,True,1
+A105,Instagram,52,3.6,Neutral,T0018,2025-02-15 18:59:00,1971.76,ZAR,Mr Price,Clothing,Card,Desktop,Soweto,Approved,False,1
+A105,Instagram,52,3.6,Neutral,T0019,2025-01-29 04:20:00,2858.37,ZAR,Dischem,Health,Card,Mobile,Durban,Approved,False,1
+A151,Twitter,82,3.6,Negative,T0163,2025-01-23 13:03:00,7060.05,ZAR,Wire Transfer,Finance,Online,Desktop,Unknown,Declined,True,0
+A151,Twitter,82,3.6,Negative,T0164,2025-01-29 01:03:00,1830.5,ZAR,Mr Price,Clothing,Card,Desktop,Bloemfontein,Approved,False,0
+A151,Twitter,82,3.6,Negative,T0165,2025-01-06 21:41:00,1376.54,ZAR,Woolworths,Retail,Card,Mobile,Bloemfontein,Approved,False,0
+A151,Twitter,82,3.6,Negative,T0166,2025-02-05 05:24:00,1092.15,ZAR,Takealot,Ecommerce,Online,Mobile,Pretoria,Approved,False,0
+A151,Twitter,82,3.6,Negative,T0167,2025-03-19 03:00:00,436.64,ZAR,Pick n Pay,Groceries,Card,Mobile,Durban,Approved,False,0
+A151,Twitter,82,3.6,Negative,T0168,2025-01-30 09:25:00,1738.78,ZAR,Nandos,Food,Card,Desktop,Cape Town,Approved,False,0
+A125,Twitter,77,2.5,Positive,T0072,2025-01-22 07:47:00,2415.81,ZAR,Mr Price,Clothing,Card,Desktop,Durban,Approved,False,2
+A125,Twitter,77,2.5,Positive,T0073,2025-03-11 07:27:00,1709.14,ZAR,Travelstart,Travel,Online,Desktop,Port Elizabeth,Approved,False,2
+A125,Twitter,77,2.5,Positive,T0074,2025-02-19 12:45:00,18051.75,ZAR,Wire Transfer,Finance,Online,Desktop,Moscow,Approved,False,2
+A163,TikTok,96,3.2,Neutral,T0201,2025-01-31 00:57:00,2411.74,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False,1
+A163,TikTok,96,3.2,Neutral,T0202,2025-03-09 14:52:00,391.29,ZAR,Uber,Transport,App,Mobile,Pretoria,Approved,False,1
+A163,TikTok,96,3.2,Neutral,T0203,2025-01-17 11:31:00,747.2,ZAR,Uber,Transport,App,Mobile,Port Elizabeth,Approved,False,1
+A197,LinkedIn,57,2.9,Neutral,T0316,2025-03-31 01:10:00,12944.67,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True,1
+A197,LinkedIn,57,2.9,Neutral,T0317,2025-02-16 06:11:00,703.3,ZAR,Shell,Fuel,Card,Desktop,Durban,Approved,False,1
+A197,LinkedIn,57,2.9,Neutral,T0318,2025-01-12 16:32:00,3042.2,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False,1
+A197,LinkedIn,57,2.9,Neutral,T0319,2025-02-02 22:37:00,2955.43,ZAR,Woolworths,Retail,Card,Mobile,Port Elizabeth,Approved,False,1
+A197,LinkedIn,57,2.9,Neutral,T0320,2025-03-28 21:12:00,15913.51,ZAR,Gift Cards Online,Other,Online,Desktop,Moscow,Declined,True,1
+A197,LinkedIn,57,2.9,Neutral,T0321,2025-02-11 10:51:00,1716.14,ZAR,Mr Price,Clothing,Card,Mobile,Soweto,Approved,False,1
+A158,Twitter,83,4.5,Neutral,T0185,2025-02-10 14:07:00,224.29,ZAR,Takealot,Ecommerce,Online,Mobile,Johannesburg,Approved,False,1
+A158,Twitter,83,4.5,Neutral,T0186,2025-01-18 00:03:00,2935.05,ZAR,Shell,Fuel,Card,Desktop,Soweto,Approved,False,1
+A158,Twitter,83,4.5,Neutral,T0187,2025-03-17 06:37:00,3064.92,ZAR,Takealot,Ecommerce,Online,Desktop,Johannesburg,Approved,False,1
+A158,Twitter,83,4.5,Neutral,T0188,2025-03-09 16:31:00,1416.77,ZAR,Takealot,Ecommerce,Online,Desktop,Pretoria,Approved,False,1
+A158,Twitter,83,4.5,Neutral,T0189,2025-01-14 10:55:00,20168.44,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Approved,False,1
+A155,Instagram,84,3.1,Positive,T0176,2025-03-29 14:54:00,1617.88,ZAR,Uber,Transport,App,Desktop,Port Elizabeth,Approved,False,2
+A155,Instagram,84,3.1,Positive,T0177,2025-01-14 07:32:00,2855.4,ZAR,Woolworths,Retail,Card,Desktop,Durban,Approved,False,2
+A155,Instagram,84,3.1,Positive,T0178,2025-02-16 09:38:00,796.43,ZAR,Woolworths,Retail,Card,Mobile,Soweto,Approved,False,2
+A158,Instagram,81,2.8,Positive,T0185,2025-02-10 14:07:00,224.29,ZAR,Takealot,Ecommerce,Online,Mobile,Johannesburg,Approved,False,2
+A158,Instagram,81,2.8,Positive,T0186,2025-01-18 00:03:00,2935.05,ZAR,Shell,Fuel,Card,Desktop,Soweto,Approved,False,2
+A158,Instagram,81,2.8,Positive,T0187,2025-03-17 06:37:00,3064.92,ZAR,Takealot,Ecommerce,Online,Desktop,Johannesburg,Approved,False,2
+A158,Instagram,81,2.8,Positive,T0188,2025-03-09 16:31:00,1416.77,ZAR,Takealot,Ecommerce,Online,Desktop,Pretoria,Approved,False,2
+A158,Instagram,81,2.8,Positive,T0189,2025-01-14 10:55:00,20168.44,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Approved,False,2
+A169,Twitter,73,2.6,Positive,T0219,2025-03-28 04:09:00,8271.54,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Declined,True,2
+A169,Twitter,73,2.6,Positive,T0220,2025-01-01 07:54:00,7379.07,ZAR,Gift Cards Online,Other,Online,Desktop,Unknown,Approved,False,2
+A169,Twitter,73,2.6,Positive,T0221,2025-02-17 12:39:00,1431.56,ZAR,Woolworths,Retail,Card,Mobile,Pretoria,Approved,False,2
+A169,Twitter,73,2.6,Positive,T0222,2025-02-03 11:50:00,21366.16,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Approved,False,2
+A132,LinkedIn,63,3.3,Positive,T0091,2025-01-04 21:41:00,7211.77,ZAR,Unknown Vendor,Other,Online,Mobile,Moscow,Approved,False,2
+A132,LinkedIn,63,3.3,Positive,T0092,2025-01-03 15:08:00,7128.39,ZAR,Unknown Vendor,Other,Online,Desktop,Moscow,Approved,False,2
+A132,LinkedIn,63,3.3,Positive,T0093,2025-03-19 00:14:00,3144.77,ZAR,Makro,Wholesale,Card,Mobile,Cape Town,Approved,False,2
+A132,LinkedIn,63,3.3,Positive,T0094,2025-03-14 04:00:00,2729.85,ZAR,Mr Price,Clothing,Card,Desktop,Johannesburg,Approved,False,2
+A132,LinkedIn,63,3.3,Positive,T0095,2025-01-01 00:09:00,174.76,ZAR,Shell,Fuel,Card,Mobile,Soweto,Approved,False,2
+A132,LinkedIn,63,3.3,Positive,T0096,2025-01-26 20:14:00,21029.64,ZAR,Crypto Exchange,Finance,Online,Mobile,Lagos,Declined,True,2
+A152,Instagram,81,4.2,Positive,T0169,2025-01-21 07:35:00,948.2,ZAR,Mr Price,Clothing,Card,Mobile,Bloemfontein,Approved,False,2
+A152,Instagram,81,4.2,Positive,T0170,2025-03-08 07:14:00,18665.17,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True,2
+A152,Instagram,81,4.2,Positive,T0171,2025-03-19 17:11:00,1639.66,ZAR,Mr Price,Clothing,Card,Mobile,Cape Town,Approved,False,2
+A152,Instagram,81,4.2,Positive,T0172,2025-01-02 22:05:00,526.81,ZAR,Makro,Wholesale,Card,Mobile,Cape Town,Approved,False,2
+A152,Instagram,81,4.2,Positive,T0173,2025-03-05 14:28:00,5625.67,ZAR,Wire Transfer,Finance,Online,Mobile,Unknown,Declined,True,2
+A121,TikTok,95,3.2,Neutral,T0061,2025-01-05 04:10:00,122.96,ZAR,Woolworths,Retail,Card,Desktop,Soweto,Approved,False,1
+A121,TikTok,95,3.2,Neutral,T0062,2025-03-03 19:23:00,2089.45,ZAR,Pick n Pay,Groceries,Card,Desktop,Pretoria,Approved,False,1
+A121,TikTok,95,3.2,Neutral,T0063,2025-03-20 19:51:00,1790.62,ZAR,Shell,Fuel,Card,Desktop,Bloemfontein,Approved,False,1
+A121,TikTok,95,3.2,Neutral,T0064,2025-01-22 05:14:00,676.17,ZAR,Pick n Pay,Groceries,Card,Desktop,Port Elizabeth,Approved,False,1
+A120,Instagram,92,3.6,Positive,T0059,2025-01-18 19:19:00,554.3,ZAR,Mr Price,Clothing,Card,Mobile,Soweto,Approved,False,2
+A120,Instagram,92,3.6,Positive,T0060,2025-01-15 06:34:00,23419.41,ZAR,Gift Cards Online,Other,Online,Mobile,Unknown,Declined,True,2

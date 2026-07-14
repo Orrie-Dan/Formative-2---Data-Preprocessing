@@ -1,0 +1,38 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets & local env
+.env
+.env.*
+
+# Caches / tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+
+# ML artifacts
+*.pkl
+*.joblib
+*.h5
+models/
+checkpoints/
+wandb/
+mlruns/

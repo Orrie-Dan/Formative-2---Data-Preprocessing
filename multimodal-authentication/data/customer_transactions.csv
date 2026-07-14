@@ -1,0 +1,329 @@
+transaction_id,customer_id,timestamp,amount,currency,merchant,category,channel,device_type,location,status,is_fraud
+T0001,A100,2025-03-04 04:05:00,13777.57,ZAR,Unknown Vendor,Other,Online,Desktop,Unknown,Approved,False
+T0002,A100,2025-01-12 20:27:00,20222.79,ZAR,Wire Transfer,Finance,Online,Desktop,Lagos,Approved,False
+T0003,A101,2025-02-06 19:32:00,2271.33,ZAR,Takealot,Ecommerce,Online,Mobile,Port Elizabeth,Approved,False
+T0004,A101,2025-03-21 01:51:00,1963.32,ZAR,Mr Price,Clothing,Card,Desktop,Johannesburg,Approved,False
+T0005,A101,2025-03-05 08:04:00,2665.4,ZAR,Uber,Transport,App,Desktop,Soweto,Approved,False
+T0006,A102,2025-02-12 11:02:00,20567.67,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True
+T0007,A102,2025-03-09 08:58:00,2406.52,ZAR,Takealot,Ecommerce,Online,Mobile,Port Elizabeth,Approved,False
+T0008,A102,2025-02-12 19:11:00,1328.09,ZAR,Shell,Fuel,Card,Mobile,Cape Town,Approved,False
+T0009,A102,2025-01-21 13:40:00,1691.18,ZAR,Woolworths,Retail,Card,Desktop,Durban,Approved,False
+T0010,A103,2025-01-09 07:46:00,2465.91,ZAR,Takealot,Ecommerce,Online,Desktop,Bloemfontein,Approved,False
+T0011,A103,2025-03-22 06:14:00,1386.8,ZAR,Mr Price,Clothing,Card,Desktop,Bloemfontein,Approved,False
+T0012,A103,2025-03-14 00:47:00,739.68,ZAR,Makro,Wholesale,Card,Desktop,Cape Town,Approved,False
+T0013,A103,2025-02-20 11:30:00,19103.31,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Approved,False
+T0014,A104,2025-03-02 15:28:00,445.13,ZAR,Woolworths,Retail,Card,Desktop,Pretoria,Approved,False
+T0015,A104,2025-02-27 13:33:00,2689.25,ZAR,Nandos,Food,Card,Mobile,Soweto,Approved,False
+T0016,A105,2025-03-30 05:16:00,5616.36,ZAR,Crypto Exchange,Finance,Online,Mobile,Unknown,Declined,True
+T0017,A105,2025-03-19 06:55:00,9678.79,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Declined,True
+T0018,A105,2025-02-15 18:59:00,1971.76,ZAR,Mr Price,Clothing,Card,Desktop,Soweto,Approved,False
+T0019,A105,2025-01-29 04:20:00,2858.37,ZAR,Dischem,Health,Card,Mobile,Durban,Approved,False
+T0020,A106,2025-02-11 17:09:00,2542.14,ZAR,Woolworths,Retail,Card,Desktop,Soweto,Approved,False
+T0021,A106,2025-03-04 11:26:00,575.48,ZAR,Nandos,Food,Card,Mobile,Pretoria,Approved,False
+T0022,A107,2025-02-24 08:57:00,2224.47,ZAR,Uber,Transport,App,Mobile,Durban,Approved,False
+T0023,A107,2025-02-02 21:29:00,3368.55,ZAR,Shell,Fuel,Card,Desktop,Cape Town,Approved,False
+T0024,A107,2025-01-24 18:15:00,3393.66,ZAR,Mr Price,Clothing,Card,Desktop,Johannesburg,Approved,False
+T0025,A109,2025-01-09 10:54:00,989.23,ZAR,Mr Price,Clothing,Card,Mobile,Cape Town,Approved,False
+T0026,A109,2025-01-28 19:34:00,748.15,ZAR,Mr Price,Clothing,Card,Desktop,Bloemfontein,Approved,False
+T0027,A109,2025-03-10 11:43:00,3005.32,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False
+T0028,A109,2025-02-22 02:38:00,2214.22,ZAR,Mr Price,Clothing,Card,Desktop,Cape Town,Approved,False
+T0029,A109,2025-01-04 04:29:00,1484.54,ZAR,Woolworths,Retail,Card,Mobile,Bloemfontein,Approved,False
+T0030,A111,2025-01-16 14:47:00,406.74,ZAR,Travelstart,Travel,Online,Mobile,Johannesburg,Approved,False
+T0031,A111,2025-02-10 08:36:00,2054.66,ZAR,Shell,Fuel,Card,Desktop,Port Elizabeth,Approved,False
+T0032,A111,2025-02-07 11:28:00,3357.03,ZAR,Shell,Fuel,Card,Desktop,Cape Town,Approved,False
+T0033,A112,2025-02-14 10:56:00,1728.97,ZAR,Woolworths,Retail,Card,Mobile,Soweto,Approved,False
+T0034,A112,2025-01-25 22:19:00,1683.54,ZAR,Makro,Wholesale,Card,Desktop,Bloemfontein,Approved,False
+T0035,A113,2025-01-01 21:32:00,5432.24,ZAR,Crypto Exchange,Finance,Online,Mobile,Lagos,Approved,False
+T0036,A113,2025-03-01 16:07:00,424.59,ZAR,Shell,Fuel,Card,Mobile,Pretoria,Approved,False
+T0037,A113,2025-03-26 18:19:00,2558.13,ZAR,Uber,Transport,App,Mobile,Soweto,Approved,False
+T0038,A113,2025-01-22 00:08:00,844.24,ZAR,Makro,Wholesale,Card,Desktop,Port Elizabeth,Approved,False
+T0039,A114,2025-03-14 23:19:00,2912.77,ZAR,Dischem,Health,Card,Mobile,Pretoria,Approved,False
+T0040,A114,2025-01-24 23:56:00,10818.36,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Declined,True
+T0041,A114,2025-02-09 23:59:00,204.94,ZAR,Takealot,Ecommerce,Online,Mobile,Durban,Approved,False
+T0042,A114,2025-03-22 02:31:00,19972.16,ZAR,Gift Cards Online,Other,Online,Mobile,Unknown,Approved,False
+T0043,A115,2025-02-06 08:53:00,2332.73,ZAR,Pick n Pay,Groceries,Card,Mobile,Bloemfontein,Approved,False
+T0044,A115,2025-03-27 05:01:00,10249.21,ZAR,Unknown Vendor,Other,Online,Mobile,Moscow,Approved,False
+T0045,A115,2025-03-09 04:22:00,578.83,ZAR,Pick n Pay,Groceries,Card,Desktop,Bloemfontein,Approved,False
+T0046,A116,2025-03-11 07:58:00,8928.69,ZAR,Gift Cards Online,Other,Online,Mobile,Moscow,Declined,True
+T0047,A116,2025-01-02 04:13:00,546.45,ZAR,Nandos,Food,Card,Mobile,Port Elizabeth,Approved,False
+T0048,A116,2025-01-11 07:30:00,2387.92,ZAR,Woolworths,Retail,Card,Desktop,Port Elizabeth,Approved,False
+T0049,A116,2025-01-18 20:48:00,2054.85,ZAR,Travelstart,Travel,Online,Mobile,Durban,Approved,False
+T0050,A116,2025-01-12 13:55:00,19779.68,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Declined,True
+T0051,A117,2025-01-29 22:31:00,14771.68,ZAR,Wire Transfer,Finance,Online,Mobile,Unknown,Declined,True
+T0052,A117,2025-01-14 15:50:00,5497.19,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Declined,True
+T0053,A117,2025-01-15 14:10:00,13382.29,ZAR,Unknown Vendor,Other,Online,Desktop,Unknown,Approved,False
+T0054,A118,2025-01-02 15:06:00,14347.63,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Approved,False
+T0055,A118,2025-02-17 18:36:00,20936.34,ZAR,Crypto Exchange,Finance,Online,Desktop,Lagos,Declined,True
+T0056,A118,2025-02-03 22:25:00,17062.14,ZAR,Gift Cards Online,Other,Online,Mobile,Unknown,Declined,True
+T0057,A118,2025-02-10 12:14:00,3042.84,ZAR,Travelstart,Travel,Online,Mobile,Johannesburg,Approved,False
+T0058,A118,2025-03-15 23:06:00,2623.75,ZAR,Uber,Transport,App,Desktop,Bloemfontein,Approved,False
+T0059,A120,2025-01-18 19:19:00,554.3,ZAR,Mr Price,Clothing,Card,Mobile,Soweto,Approved,False
+T0060,A120,2025-01-15 06:34:00,23419.41,ZAR,Gift Cards Online,Other,Online,Mobile,Unknown,Declined,True
+T0061,A121,2025-01-05 04:10:00,122.96,ZAR,Woolworths,Retail,Card,Desktop,Soweto,Approved,False
+T0062,A121,2025-03-03 19:23:00,2089.45,ZAR,Pick n Pay,Groceries,Card,Desktop,Pretoria,Approved,False
+T0063,A121,2025-03-20 19:51:00,1790.62,ZAR,Shell,Fuel,Card,Desktop,Bloemfontein,Approved,False
+T0064,A121,2025-01-22 05:14:00,676.17,ZAR,Pick n Pay,Groceries,Card,Desktop,Port Elizabeth,Approved,False
+T0065,A122,2025-03-25 12:53:00,5985.08,ZAR,Wire Transfer,Finance,Online,Mobile,Lagos,Declined,True
+T0066,A122,2025-02-06 22:41:00,229.27,ZAR,Woolworths,Retail,Card,Mobile,Bloemfontein,Approved,False
+T0067,A122,2025-01-29 19:34:00,23053.06,ZAR,Crypto Exchange,Finance,Online,Desktop,Moscow,Approved,False
+T0068,A122,2025-03-08 03:49:00,2737.54,ZAR,Makro,Wholesale,Card,Desktop,Soweto,Approved,False
+T0069,A124,2025-02-11 18:23:00,3008.62,ZAR,Nandos,Food,Card,Desktop,Bloemfontein,Approved,False
+T0070,A124,2025-01-13 10:28:00,969.3,ZAR,Makro,Wholesale,Card,Mobile,Cape Town,Approved,False
+T0071,A124,2025-02-03 12:21:00,852.37,ZAR,Dischem,Health,Card,Desktop,Durban,Approved,False
+T0072,A125,2025-01-22 07:47:00,2415.81,ZAR,Mr Price,Clothing,Card,Desktop,Durban,Approved,False
+T0073,A125,2025-03-11 07:27:00,1709.14,ZAR,Travelstart,Travel,Online,Desktop,Port Elizabeth,Approved,False
+T0074,A125,2025-02-19 12:45:00,18051.75,ZAR,Wire Transfer,Finance,Online,Desktop,Moscow,Approved,False
+T0075,A126,2025-01-19 14:41:00,2585.38,ZAR,Shell,Fuel,Card,Desktop,Cape Town,Approved,False
+T0076,A126,2025-01-09 14:43:00,7642.06,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True
+T0077,A127,2025-03-28 23:10:00,524.06,ZAR,Nandos,Food,Card,Desktop,Port Elizabeth,Approved,False
+T0078,A127,2025-03-31 19:55:00,2750.05,ZAR,Dischem,Health,Card,Desktop,Soweto,Approved,False
+T0079,A128,2025-01-09 12:36:00,2085.76,ZAR,Uber,Transport,App,Mobile,Cape Town,Approved,False
+T0080,A128,2025-02-21 11:27:00,1999.08,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False
+T0081,A129,2025-01-22 14:08:00,20984.89,ZAR,Unknown Vendor,Other,Online,Desktop,Moscow,Declined,True
+T0082,A129,2025-02-13 15:43:00,7342.07,ZAR,Crypto Exchange,Finance,Online,Mobile,Unknown,Declined,True
+T0083,A129,2025-03-08 21:49:00,18424.63,ZAR,Gift Cards Online,Other,Online,Desktop,Moscow,Declined,True
+T0084,A129,2025-02-17 07:18:00,1306.46,ZAR,Makro,Wholesale,Card,Mobile,Johannesburg,Approved,False
+T0085,A131,2025-02-09 17:22:00,3279.64,ZAR,Takealot,Ecommerce,Online,Mobile,Pretoria,Approved,False
+T0086,A131,2025-03-12 14:28:00,16059.86,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Approved,False
+T0087,A131,2025-03-06 20:57:00,3453.88,ZAR,Dischem,Health,Card,Mobile,Cape Town,Approved,False
+T0088,A131,2025-02-27 02:07:00,2984.34,ZAR,Woolworths,Retail,Card,Mobile,Port Elizabeth,Approved,False
+T0089,A131,2025-01-02 02:27:00,2417.03,ZAR,Makro,Wholesale,Card,Desktop,Pretoria,Approved,False
+T0090,A131,2025-02-09 00:18:00,10907.18,ZAR,Crypto Exchange,Finance,Online,Desktop,Unknown,Declined,True
+T0091,A132,2025-01-04 21:41:00,7211.77,ZAR,Unknown Vendor,Other,Online,Mobile,Moscow,Approved,False
+T0092,A132,2025-01-03 15:08:00,7128.39,ZAR,Unknown Vendor,Other,Online,Desktop,Moscow,Approved,False
+T0093,A132,2025-03-19 00:14:00,3144.77,ZAR,Makro,Wholesale,Card,Mobile,Cape Town,Approved,False
+T0094,A132,2025-03-14 04:00:00,2729.85,ZAR,Mr Price,Clothing,Card,Desktop,Johannesburg,Approved,False
+T0095,A132,2025-01-01 00:09:00,174.76,ZAR,Shell,Fuel,Card,Mobile,Soweto,Approved,False
+T0096,A132,2025-01-26 20:14:00,21029.64,ZAR,Crypto Exchange,Finance,Online,Mobile,Lagos,Declined,True
+T0097,A133,2025-03-04 19:50:00,23555.91,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Approved,False
+T0098,A133,2025-01-12 16:30:00,746.15,ZAR,Pick n Pay,Groceries,Card,Desktop,Cape Town,Approved,False
+T0099,A133,2025-01-14 19:44:00,17600.24,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Approved,False
+T0100,A133,2025-03-05 12:58:00,984.12,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False
+T0101,A133,2025-02-25 00:02:00,238.03,ZAR,Makro,Wholesale,Card,Mobile,Cape Town,Approved,False
+T0102,A135,2025-02-03 02:46:00,647.29,ZAR,Mr Price,Clothing,Card,Mobile,Soweto,Approved,False
+T0103,A135,2025-02-18 18:15:00,1632.03,ZAR,Dischem,Health,Card,Desktop,Port Elizabeth,Approved,False
+T0104,A135,2025-02-18 07:25:00,7902.61,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Approved,False
+T0105,A135,2025-02-09 22:09:00,2289.85,ZAR,Nandos,Food,Card,Mobile,Soweto,Approved,False
+T0106,A135,2025-03-24 11:07:00,1443.92,ZAR,Mr Price,Clothing,Card,Mobile,Pretoria,Approved,False
+T0107,A135,2025-02-25 10:47:00,10561.51,ZAR,Wire Transfer,Finance,Online,Desktop,Unknown,Declined,True
+T0108,A137,2025-02-06 20:13:00,1470.75,ZAR,Makro,Wholesale,Card,Desktop,Johannesburg,Approved,False
+T0109,A137,2025-01-04 07:25:00,1143.79,ZAR,Makro,Wholesale,Card,Mobile,Port Elizabeth,Approved,False
+T0110,A137,2025-02-21 08:33:00,828.3,ZAR,Mr Price,Clothing,Card,Desktop,Cape Town,Approved,False
+T0111,A137,2025-02-28 14:18:00,2285.42,ZAR,Travelstart,Travel,Online,Mobile,Soweto,Approved,False
+T0112,A138,2025-02-17 15:31:00,1538.39,ZAR,Shell,Fuel,Card,Mobile,Pretoria,Approved,False
+T0113,A138,2025-01-12 22:51:00,19734.11,ZAR,Wire Transfer,Finance,Online,Desktop,Lagos,Approved,False
+T0114,A138,2025-02-16 20:23:00,20997.41,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Declined,True
+T0115,A138,2025-03-20 20:49:00,298.6,ZAR,Pick n Pay,Groceries,Card,Mobile,Cape Town,Approved,False
+T0116,A138,2025-02-13 04:43:00,1202.75,ZAR,Woolworths,Retail,Card,Mobile,Johannesburg,Approved,False
+T0117,A139,2025-03-19 09:22:00,5293.66,ZAR,Unknown Vendor,Other,Online,Desktop,Moscow,Approved,False
+T0118,A139,2025-01-11 12:21:00,2122.9,ZAR,Takealot,Ecommerce,Online,Desktop,Soweto,Approved,False
+T0119,A140,2025-02-08 07:46:00,2713.76,ZAR,Woolworths,Retail,Card,Desktop,Port Elizabeth,Approved,False
+T0120,A140,2025-03-25 15:20:00,1388.05,ZAR,Takealot,Ecommerce,Online,Mobile,Soweto,Approved,False
+T0121,A140,2025-02-12 03:42:00,1861.55,ZAR,Travelstart,Travel,Online,Mobile,Johannesburg,Approved,False
+T0122,A140,2025-03-28 13:12:00,3462.51,ZAR,Dischem,Health,Card,Desktop,Bloemfontein,Approved,False
+T0123,A140,2025-03-17 09:19:00,7831.92,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Declined,True
+T0124,A140,2025-03-24 03:18:00,13675.58,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Declined,True
+T0125,A141,2025-01-27 04:29:00,5892.98,ZAR,Gift Cards Online,Other,Online,Desktop,Unknown,Declined,True
+T0126,A141,2025-01-08 06:14:00,1751.85,ZAR,Makro,Wholesale,Card,Desktop,Cape Town,Approved,False
+T0127,A141,2025-03-02 19:45:00,17751.77,ZAR,Crypto Exchange,Finance,Online,Desktop,Lagos,Declined,True
+T0128,A142,2025-03-25 20:19:00,15790.55,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Declined,True
+T0129,A142,2025-02-03 12:25:00,2989.45,ZAR,Nandos,Food,Card,Desktop,Bloemfontein,Approved,False
+T0130,A143,2025-01-31 13:29:00,2983.45,ZAR,Makro,Wholesale,Card,Desktop,Durban,Approved,False
+T0131,A143,2025-02-05 23:55:00,412.18,ZAR,Nandos,Food,Card,Desktop,Cape Town,Approved,False
+T0132,A143,2025-01-31 07:11:00,662.4,ZAR,Makro,Wholesale,Card,Mobile,Cape Town,Approved,False
+T0133,A144,2025-02-07 07:08:00,1596.32,ZAR,Makro,Wholesale,Card,Desktop,Port Elizabeth,Approved,False
+T0134,A144,2025-01-16 16:31:00,1009.18,ZAR,Nandos,Food,Card,Desktop,Cape Town,Approved,False
+T0135,A145,2025-03-10 15:54:00,17407.15,ZAR,Wire Transfer,Finance,Online,Desktop,Moscow,Declined,True
+T0136,A145,2025-03-20 01:06:00,24264.22,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Approved,False
+T0137,A145,2025-02-28 10:58:00,13801.77,ZAR,Unknown Vendor,Other,Online,Mobile,Moscow,Declined,True
+T0138,A145,2025-03-09 15:20:00,10764.56,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Approved,False
+T0139,A145,2025-03-11 23:29:00,191.27,ZAR,Woolworths,Retail,Card,Desktop,Pretoria,Approved,False
+T0140,A146,2025-01-07 19:38:00,24558.34,ZAR,Gift Cards Online,Other,Online,Mobile,Lagos,Declined,True
+T0141,A146,2025-01-24 22:26:00,2817.11,ZAR,Uber,Transport,App,Desktop,Pretoria,Approved,False
+T0142,A146,2025-03-27 01:22:00,1335.82,ZAR,Uber,Transport,App,Mobile,Cape Town,Approved,False
+T0143,A146,2025-01-01 20:44:00,19265.16,ZAR,Wire Transfer,Finance,Online,Desktop,Moscow,Approved,False
+T0144,A146,2025-03-23 05:06:00,218.92,ZAR,Dischem,Health,Card,Desktop,Bloemfontein,Approved,False
+T0145,A146,2025-03-27 12:15:00,65.53,ZAR,Uber,Transport,App,Desktop,Port Elizabeth,Approved,False
+T0146,A147,2025-03-22 14:40:00,1434.68,ZAR,Pick n Pay,Groceries,Card,Mobile,Soweto,Approved,False
+T0147,A147,2025-02-01 18:51:00,2992.09,ZAR,Uber,Transport,App,Desktop,Pretoria,Approved,False
+T0148,A147,2025-02-05 02:16:00,2086.6,ZAR,Shell,Fuel,Card,Desktop,Pretoria,Approved,False
+T0149,A147,2025-01-31 10:43:00,8751.87,ZAR,Gift Cards Online,Other,Online,Mobile,Moscow,Declined,True
+T0150,A148,2025-03-11 09:32:00,1072.45,ZAR,Nandos,Food,Card,Mobile,Port Elizabeth,Approved,False
+T0151,A148,2025-03-19 16:44:00,3491.65,ZAR,Woolworths,Retail,Card,Desktop,Soweto,Approved,False
+T0152,A148,2025-01-20 11:20:00,3207.78,ZAR,Pick n Pay,Groceries,Card,Mobile,Durban,Approved,False
+T0153,A148,2025-02-01 04:33:00,281.73,ZAR,Woolworths,Retail,Card,Mobile,Durban,Approved,False
+T0154,A148,2025-03-21 08:26:00,2239.16,ZAR,Shell,Fuel,Card,Mobile,Pretoria,Approved,False
+T0155,A148,2025-03-30 06:20:00,20039.26,ZAR,Gift Cards Online,Other,Online,Desktop,Moscow,Declined,True
+T0156,A149,2025-03-23 07:31:00,1172.43,ZAR,Uber,Transport,App,Desktop,Port Elizabeth,Approved,False
+T0157,A149,2025-01-27 20:14:00,16814.9,ZAR,Unknown Vendor,Other,Online,Mobile,Unknown,Declined,True
+T0158,A149,2025-03-20 00:16:00,586.27,ZAR,Shell,Fuel,Card,Mobile,Durban,Approved,False
+T0159,A150,2025-02-27 10:51:00,2754.19,ZAR,Uber,Transport,App,Mobile,Bloemfontein,Approved,False
+T0160,A150,2025-03-02 21:16:00,18491.95,ZAR,Wire Transfer,Finance,Online,Desktop,Moscow,Approved,False
+T0161,A150,2025-01-29 02:25:00,1989.49,ZAR,Mr Price,Clothing,Card,Desktop,Johannesburg,Approved,False
+T0162,A150,2025-03-26 10:08:00,1818.93,ZAR,Shell,Fuel,Card,Mobile,Port Elizabeth,Approved,False
+T0163,A151,2025-01-23 13:03:00,7060.05,ZAR,Wire Transfer,Finance,Online,Desktop,Unknown,Declined,True
+T0164,A151,2025-01-29 01:03:00,1830.5,ZAR,Mr Price,Clothing,Card,Desktop,Bloemfontein,Approved,False
+T0165,A151,2025-01-06 21:41:00,1376.54,ZAR,Woolworths,Retail,Card,Mobile,Bloemfontein,Approved,False
+T0166,A151,2025-02-05 05:24:00,1092.15,ZAR,Takealot,Ecommerce,Online,Mobile,Pretoria,Approved,False
+T0167,A151,2025-03-19 03:00:00,436.64,ZAR,Pick n Pay,Groceries,Card,Mobile,Durban,Approved,False
+T0168,A151,2025-01-30 09:25:00,1738.78,ZAR,Nandos,Food,Card,Desktop,Cape Town,Approved,False
+T0169,A152,2025-01-21 07:35:00,948.2,ZAR,Mr Price,Clothing,Card,Mobile,Bloemfontein,Approved,False
+T0170,A152,2025-03-08 07:14:00,18665.17,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True
+T0171,A152,2025-03-19 17:11:00,1639.66,ZAR,Mr Price,Clothing,Card,Mobile,Cape Town,Approved,False
+T0172,A152,2025-01-02 22:05:00,526.81,ZAR,Makro,Wholesale,Card,Mobile,Cape Town,Approved,False
+T0173,A152,2025-03-05 14:28:00,5625.67,ZAR,Wire Transfer,Finance,Online,Mobile,Unknown,Declined,True
+T0174,A154,2025-03-18 11:00:00,2086.17,ZAR,Nandos,Food,Card,Mobile,Soweto,Approved,False
+T0175,A154,2025-03-11 23:51:00,17382.38,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Declined,True
+T0176,A155,2025-03-29 14:54:00,1617.88,ZAR,Uber,Transport,App,Desktop,Port Elizabeth,Approved,False
+T0177,A155,2025-01-14 07:32:00,2855.4,ZAR,Woolworths,Retail,Card,Desktop,Durban,Approved,False
+T0178,A155,2025-02-16 09:38:00,796.43,ZAR,Woolworths,Retail,Card,Mobile,Soweto,Approved,False
+T0179,A156,2025-02-01 09:01:00,152.93,ZAR,Woolworths,Retail,Card,Desktop,Bloemfontein,Approved,False
+T0180,A156,2025-03-05 07:44:00,2551.88,ZAR,Takealot,Ecommerce,Online,Desktop,Bloemfontein,Approved,False
+T0181,A156,2025-02-23 05:07:00,3120.57,ZAR,Shell,Fuel,Card,Desktop,Johannesburg,Approved,False
+T0182,A156,2025-01-16 19:30:00,2441.18,ZAR,Takealot,Ecommerce,Online,Mobile,Cape Town,Approved,False
+T0183,A156,2025-03-31 13:35:00,5080.15,ZAR,Wire Transfer,Finance,Online,Mobile,Lagos,Declined,True
+T0184,A156,2025-03-21 09:32:00,3145.69,ZAR,Woolworths,Retail,Card,Mobile,Cape Town,Approved,False
+T0185,A158,2025-02-10 14:07:00,224.29,ZAR,Takealot,Ecommerce,Online,Mobile,Johannesburg,Approved,False
+T0186,A158,2025-01-18 00:03:00,2935.05,ZAR,Shell,Fuel,Card,Desktop,Soweto,Approved,False
+T0187,A158,2025-03-17 06:37:00,3064.92,ZAR,Takealot,Ecommerce,Online,Desktop,Johannesburg,Approved,False
+T0188,A158,2025-03-09 16:31:00,1416.77,ZAR,Takealot,Ecommerce,Online,Desktop,Pretoria,Approved,False
+T0189,A158,2025-01-14 10:55:00,20168.44,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Approved,False
+T0190,A160,2025-02-16 10:24:00,2796.3,ZAR,Pick n Pay,Groceries,Card,Desktop,Durban,Approved,False
+T0191,A160,2025-02-05 03:40:00,3119.31,ZAR,Woolworths,Retail,Card,Mobile,Soweto,Approved,False
+T0192,A160,2025-01-17 16:11:00,3367.35,ZAR,Takealot,Ecommerce,Online,Desktop,Johannesburg,Approved,False
+T0193,A160,2025-02-12 21:44:00,23251.65,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True
+T0194,A160,2025-03-08 15:43:00,12581.05,ZAR,Gift Cards Online,Other,Online,Desktop,Unknown,Declined,True
+T0195,A160,2025-03-23 16:51:00,16398.68,ZAR,Unknown Vendor,Other,Online,Desktop,Moscow,Declined,True
+T0196,A162,2025-02-08 17:27:00,755.17,ZAR,Nandos,Food,Card,Mobile,Cape Town,Approved,False
+T0197,A162,2025-03-14 17:55:00,1351.15,ZAR,Takealot,Ecommerce,Online,Desktop,Port Elizabeth,Approved,False
+T0198,A162,2025-02-01 14:34:00,1151.01,ZAR,Makro,Wholesale,Card,Desktop,Durban,Approved,False
+T0199,A162,2025-02-21 22:30:00,2126.12,ZAR,Dischem,Health,Card,Mobile,Durban,Approved,False
+T0200,A162,2025-02-02 09:46:00,1351.36,ZAR,Pick n Pay,Groceries,Card,Mobile,Johannesburg,Approved,False
+T0201,A163,2025-01-31 00:57:00,2411.74,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False
+T0202,A163,2025-03-09 14:52:00,391.29,ZAR,Uber,Transport,App,Mobile,Pretoria,Approved,False
+T0203,A163,2025-01-17 11:31:00,747.2,ZAR,Uber,Transport,App,Mobile,Port Elizabeth,Approved,False
+T0204,A165,2025-01-01 11:05:00,205.85,ZAR,Mr Price,Clothing,Card,Desktop,Johannesburg,Approved,False
+T0205,A165,2025-03-21 02:14:00,1759.5,ZAR,Uber,Transport,App,Mobile,Soweto,Approved,False
+T0206,A165,2025-01-28 21:46:00,2688.57,ZAR,Woolworths,Retail,Card,Desktop,Durban,Approved,False
+T0207,A165,2025-02-01 22:35:00,3439.17,ZAR,Woolworths,Retail,Card,Mobile,Port Elizabeth,Approved,False
+T0208,A166,2025-02-19 10:05:00,1100.41,ZAR,Woolworths,Retail,Card,Desktop,Johannesburg,Approved,False
+T0209,A166,2025-01-15 01:15:00,17335.12,ZAR,Crypto Exchange,Finance,Online,Mobile,Lagos,Declined,True
+T0210,A166,2025-02-22 12:44:00,2989.17,ZAR,Takealot,Ecommerce,Online,Desktop,Durban,Approved,False
+T0211,A166,2025-02-06 02:45:00,1330.82,ZAR,Shell,Fuel,Card,Mobile,Bloemfontein,Approved,False
+T0212,A167,2025-02-06 02:13:00,3298.31,ZAR,Pick n Pay,Groceries,Card,Desktop,Johannesburg,Approved,False
+T0213,A167,2025-02-25 04:39:00,10290.8,ZAR,Unknown Vendor,Other,Online,Mobile,Unknown,Approved,False
+T0214,A167,2025-03-21 17:08:00,896.14,ZAR,Pick n Pay,Groceries,Card,Desktop,Pretoria,Approved,False
+T0215,A167,2025-02-18 12:43:00,1220.66,ZAR,Makro,Wholesale,Card,Mobile,Port Elizabeth,Approved,False
+T0216,A167,2025-01-04 22:04:00,606.33,ZAR,Shell,Fuel,Card,Desktop,Johannesburg,Approved,False
+T0217,A168,2025-02-17 09:32:00,15353.23,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Declined,True
+T0218,A168,2025-01-12 04:57:00,504.55,ZAR,Mr Price,Clothing,Card,Mobile,Durban,Approved,False
+T0219,A169,2025-03-28 04:09:00,8271.54,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Declined,True
+T0220,A169,2025-01-01 07:54:00,7379.07,ZAR,Gift Cards Online,Other,Online,Desktop,Unknown,Approved,False
+T0221,A169,2025-02-17 12:39:00,1431.56,ZAR,Woolworths,Retail,Card,Mobile,Pretoria,Approved,False
+T0222,A169,2025-02-03 11:50:00,21366.16,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Approved,False
+T0223,A172,2025-01-31 01:47:00,11827.74,ZAR,Gift Cards Online,Other,Online,Desktop,Moscow,Declined,True
+T0224,A172,2025-03-13 19:12:00,2640.39,ZAR,Makro,Wholesale,Card,Mobile,Soweto,Approved,False
+T0225,A172,2025-01-01 13:59:00,13759.79,ZAR,Gift Cards Online,Other,Online,Mobile,Moscow,Declined,True
+T0226,A172,2025-02-11 19:07:00,264.12,ZAR,Uber,Transport,App,Mobile,Durban,Approved,False
+T0227,A172,2025-02-05 03:55:00,2231.38,ZAR,Takealot,Ecommerce,Online,Desktop,Pretoria,Approved,False
+T0228,A172,2025-02-11 07:39:00,2555.32,ZAR,Shell,Fuel,Card,Desktop,Bloemfontein,Approved,False
+T0229,A173,2025-02-17 08:33:00,3327.71,ZAR,Woolworths,Retail,Card,Mobile,Pretoria,Approved,False
+T0230,A173,2025-02-22 00:59:00,2968.73,ZAR,Woolworths,Retail,Card,Mobile,Soweto,Approved,False
+T0231,A173,2025-01-25 23:27:00,2636.18,ZAR,Shell,Fuel,Card,Desktop,Port Elizabeth,Approved,False
+T0232,A173,2025-03-06 08:44:00,11049.61,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Approved,False
+T0233,A174,2025-03-06 14:30:00,1988.28,ZAR,Dischem,Health,Card,Desktop,Johannesburg,Approved,False
+T0234,A174,2025-01-31 16:24:00,13386.02,ZAR,Gift Cards Online,Other,Online,Mobile,Lagos,Declined,True
+T0235,A174,2025-01-09 07:40:00,484.03,ZAR,Mr Price,Clothing,Card,Mobile,Bloemfontein,Approved,False
+T0236,A176,2025-03-14 04:09:00,5395.33,ZAR,Unknown Vendor,Other,Online,Desktop,Lagos,Declined,True
+T0237,A176,2025-01-16 03:52:00,9933.61,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Declined,True
+T0238,A176,2025-03-24 21:44:00,10670.42,ZAR,Unknown Vendor,Other,Online,Mobile,Unknown,Declined,True
+T0239,A176,2025-02-22 14:44:00,19027.82,ZAR,Wire Transfer,Finance,Online,Mobile,Lagos,Approved,False
+T0240,A176,2025-03-06 23:31:00,1155.69,ZAR,Shell,Fuel,Card,Mobile,Soweto,Approved,False
+T0241,A177,2025-02-06 16:52:00,130.14,ZAR,Travelstart,Travel,Online,Desktop,Pretoria,Approved,False
+T0242,A177,2025-03-26 20:51:00,1581.6,ZAR,Makro,Wholesale,Card,Mobile,Johannesburg,Approved,False
+T0243,A177,2025-02-14 10:37:00,1928.69,ZAR,Shell,Fuel,Card,Desktop,Soweto,Approved,False
+T0244,A177,2025-03-24 22:55:00,892.51,ZAR,Shell,Fuel,Card,Mobile,Durban,Approved,False
+T0245,A178,2025-01-21 18:06:00,19899.83,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Approved,False
+T0246,A178,2025-02-24 15:38:00,878.78,ZAR,Makro,Wholesale,Card,Mobile,Pretoria,Approved,False
+T0247,A178,2025-02-02 09:17:00,2071.57,ZAR,Shell,Fuel,Card,Mobile,Johannesburg,Approved,False
+T0248,A178,2025-02-21 04:21:00,3018.97,ZAR,Travelstart,Travel,Online,Mobile,Bloemfontein,Approved,False
+T0249,A178,2025-01-13 20:14:00,2801.41,ZAR,Pick n Pay,Groceries,Card,Mobile,Durban,Approved,False
+T0250,A178,2025-01-11 09:27:00,449.18,ZAR,Travelstart,Travel,Online,Desktop,Bloemfontein,Approved,False
+T0251,A179,2025-02-08 09:37:00,581.17,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False
+T0252,A179,2025-01-13 14:47:00,24616.42,ZAR,Wire Transfer,Finance,Online,Mobile,Moscow,Declined,True
+T0253,A179,2025-03-01 10:06:00,3102.73,ZAR,Uber,Transport,App,Desktop,Johannesburg,Approved,False
+T0254,A180,2025-02-15 13:14:00,1511.06,ZAR,Makro,Wholesale,Card,Desktop,Johannesburg,Approved,False
+T0255,A180,2025-01-01 23:01:00,2301.77,ZAR,Shell,Fuel,Card,Desktop,Soweto,Approved,False
+T0256,A180,2025-03-03 17:07:00,378.44,ZAR,Pick n Pay,Groceries,Card,Desktop,Pretoria,Approved,False
+T0257,A180,2025-01-17 10:12:00,1641.17,ZAR,Shell,Fuel,Card,Mobile,Durban,Approved,False
+T0258,A180,2025-01-30 18:40:00,1269.02,ZAR,Dischem,Health,Card,Desktop,Soweto,Approved,False
+T0259,A180,2025-01-22 17:42:00,13333.32,ZAR,Gift Cards Online,Other,Online,Desktop,Moscow,Declined,True
+T0260,A181,2025-01-13 13:52:00,3130.96,ZAR,Mr Price,Clothing,Card,Desktop,Johannesburg,Approved,False
+T0261,A181,2025-02-18 06:04:00,579.66,ZAR,Woolworths,Retail,Card,Desktop,Durban,Approved,False
+T0262,A182,2025-03-18 18:05:00,1555.29,ZAR,Uber,Transport,App,Mobile,Cape Town,Approved,False
+T0263,A182,2025-01-31 04:01:00,2889.79,ZAR,Shell,Fuel,Card,Mobile,Soweto,Approved,False
+T0264,A183,2025-03-15 01:05:00,21462.49,ZAR,Gift Cards Online,Other,Online,Mobile,Lagos,Declined,True
+T0265,A183,2025-01-24 07:45:00,2595.4,ZAR,Dischem,Health,Card,Mobile,Soweto,Approved,False
+T0266,A185,2025-01-28 08:24:00,1653.14,ZAR,Nandos,Food,Card,Mobile,Bloemfontein,Approved,False
+T0267,A185,2025-03-28 02:45:00,2642.64,ZAR,Makro,Wholesale,Card,Mobile,Johannesburg,Approved,False
+T0268,A185,2025-01-04 19:03:00,654.95,ZAR,Shell,Fuel,Card,Mobile,Johannesburg,Approved,False
+T0269,A185,2025-03-30 15:10:00,523.38,ZAR,Travelstart,Travel,Online,Mobile,Port Elizabeth,Approved,False
+T0270,A186,2025-03-29 22:52:00,3069.04,ZAR,Dischem,Health,Card,Mobile,Port Elizabeth,Approved,False
+T0271,A186,2025-03-01 22:17:00,811.75,ZAR,Takealot,Ecommerce,Online,Mobile,Pretoria,Approved,False
+T0272,A186,2025-03-16 08:42:00,16328.41,ZAR,Unknown Vendor,Other,Online,Mobile,Lagos,Declined,True
+T0273,A186,2025-02-24 08:29:00,220.63,ZAR,Pick n Pay,Groceries,Card,Desktop,Port Elizabeth,Approved,False
+T0274,A186,2025-03-10 02:49:00,1494.36,ZAR,Uber,Transport,App,Mobile,Johannesburg,Approved,False
+T0275,A186,2025-01-25 03:31:00,1379.52,ZAR,Nandos,Food,Card,Mobile,Bloemfontein,Approved,False
+T0276,A187,2025-03-17 01:21:00,2384.45,ZAR,Mr Price,Clothing,Card,Mobile,Pretoria,Approved,False
+T0277,A187,2025-03-11 15:46:00,3136.06,ZAR,Pick n Pay,Groceries,Card,Mobile,Johannesburg,Approved,False
+T0278,A187,2025-03-17 22:28:00,14399.12,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Declined,True
+T0279,A188,2025-01-18 07:40:00,2070.91,ZAR,Uber,Transport,App,Mobile,Pretoria,Approved,False
+T0280,A188,2025-01-19 02:25:00,392.09,ZAR,Takealot,Ecommerce,Online,Desktop,Durban,Approved,False
+T0281,A188,2025-03-19 04:19:00,514.69,ZAR,Takealot,Ecommerce,Online,Mobile,Soweto,Approved,False
+T0282,A189,2025-01-31 06:55:00,1282.93,ZAR,Uber,Transport,App,Desktop,Cape Town,Approved,False
+T0283,A189,2025-01-03 22:41:00,3114.86,ZAR,Dischem,Health,Card,Mobile,Johannesburg,Approved,False
+T0284,A189,2025-02-06 02:11:00,7306.53,ZAR,Unknown Vendor,Other,Online,Desktop,Unknown,Declined,True
+T0285,A190,2025-03-31 10:02:00,21396.18,ZAR,Unknown Vendor,Other,Online,Mobile,Unknown,Declined,True
+T0286,A190,2025-03-27 02:34:00,1167.58,ZAR,Dischem,Health,Card,Desktop,Pretoria,Approved,False
+T0287,A190,2025-02-14 12:29:00,8406.82,ZAR,Crypto Exchange,Finance,Online,Mobile,Unknown,Approved,False
+T0288,A190,2025-02-22 11:07:00,12614.65,ZAR,Wire Transfer,Finance,Online,Desktop,Moscow,Declined,True
+T0289,A190,2025-01-10 19:51:00,716.57,ZAR,Shell,Fuel,Card,Mobile,Port Elizabeth,Approved,False
+T0290,A190,2025-02-06 10:25:00,1287.42,ZAR,Makro,Wholesale,Card,Desktop,Soweto,Approved,False
+T0291,A191,2025-03-07 09:46:00,3268.09,ZAR,Dischem,Health,Card,Mobile,Port Elizabeth,Approved,False
+T0292,A191,2025-02-04 11:17:00,2009.37,ZAR,Uber,Transport,App,Desktop,Pretoria,Approved,False
+T0293,A191,2025-03-29 08:04:00,1156.47,ZAR,Shell,Fuel,Card,Mobile,Pretoria,Approved,False
+T0294,A191,2025-02-15 17:58:00,622.92,ZAR,Nandos,Food,Card,Mobile,Cape Town,Approved,False
+T0295,A191,2025-02-17 06:31:00,16253.45,ZAR,Gift Cards Online,Other,Online,Desktop,Unknown,Approved,False
+T0296,A192,2025-01-05 15:56:00,16947.89,ZAR,Gift Cards Online,Other,Online,Desktop,Moscow,Declined,True
+T0297,A192,2025-02-22 23:00:00,3237.46,ZAR,Dischem,Health,Card,Desktop,Port Elizabeth,Approved,False
+T0298,A192,2025-02-20 01:01:00,2397.44,ZAR,Pick n Pay,Groceries,Card,Mobile,Port Elizabeth,Approved,False
+T0299,A192,2025-02-11 10:00:00,22042.91,ZAR,Unknown Vendor,Other,Online,Desktop,Unknown,Declined,True
+T0300,A192,2025-02-03 20:33:00,11614.32,ZAR,Crypto Exchange,Finance,Online,Mobile,Moscow,Approved,False
+T0301,A192,2025-03-11 03:29:00,604.03,ZAR,Uber,Transport,App,Mobile,Pretoria,Approved,False
+T0302,A193,2025-03-13 20:51:00,3374.35,ZAR,Uber,Transport,App,Mobile,Port Elizabeth,Approved,False
+T0303,A193,2025-01-11 02:23:00,22562.95,ZAR,Wire Transfer,Finance,Online,Desktop,Lagos,Declined,True
+T0304,A193,2025-02-27 23:43:00,1997.15,ZAR,Nandos,Food,Card,Desktop,Pretoria,Approved,False
+T0305,A193,2025-01-12 02:52:00,12399.69,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True
+T0306,A194,2025-03-20 01:01:00,10687.94,ZAR,Crypto Exchange,Finance,Online,Desktop,Moscow,Declined,True
+T0307,A194,2025-03-04 13:09:00,1649.68,ZAR,Nandos,Food,Card,Desktop,Pretoria,Approved,False
+T0308,A194,2025-02-25 03:02:00,1349.73,ZAR,Travelstart,Travel,Online,Desktop,Bloemfontein,Approved,False
+T0309,A195,2025-02-21 04:29:00,9286.53,ZAR,Wire Transfer,Finance,Online,Mobile,Lagos,Declined,True
+T0310,A195,2025-01-18 09:13:00,3318.25,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False
+T0311,A195,2025-02-22 15:59:00,328.54,ZAR,Dischem,Health,Card,Desktop,Port Elizabeth,Approved,False
+T0312,A195,2025-02-02 00:12:00,13580.52,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True
+T0313,A196,2025-03-05 13:18:00,24174.15,ZAR,Wire Transfer,Finance,Online,Desktop,Unknown,Declined,True
+T0314,A196,2025-03-17 21:07:00,5902.29,ZAR,Gift Cards Online,Other,Online,Mobile,Moscow,Approved,False
+T0315,A196,2025-01-15 17:32:00,2929.74,ZAR,Pick n Pay,Groceries,Card,Mobile,Port Elizabeth,Approved,False
+T0316,A197,2025-03-31 01:10:00,12944.67,ZAR,Gift Cards Online,Other,Online,Desktop,Lagos,Declined,True
+T0317,A197,2025-02-16 06:11:00,703.3,ZAR,Shell,Fuel,Card,Desktop,Durban,Approved,False
+T0318,A197,2025-01-12 16:32:00,3042.2,ZAR,Takealot,Ecommerce,Online,Desktop,Cape Town,Approved,False
+T0319,A197,2025-02-02 22:37:00,2955.43,ZAR,Woolworths,Retail,Card,Mobile,Port Elizabeth,Approved,False
+T0320,A197,2025-03-28 21:12:00,15913.51,ZAR,Gift Cards Online,Other,Online,Desktop,Moscow,Declined,True
+T0321,A197,2025-02-11 10:51:00,1716.14,ZAR,Mr Price,Clothing,Card,Mobile,Soweto,Approved,False
+T0322,A198,2025-01-09 17:04:00,1400.7,ZAR,Dischem,Health,Card,Desktop,Cape Town,Approved,False
+T0323,A198,2025-02-25 02:02:00,13921.46,ZAR,Unknown Vendor,Other,Online,Mobile,Moscow,Approved,False
+T0324,A198,2025-03-29 19:13:00,760.08,ZAR,Takealot,Ecommerce,Online,Mobile,Johannesburg,Approved,False
+T0325,A199,2025-01-04 05:33:00,3421.31,ZAR,Travelstart,Travel,Online,Mobile,Port Elizabeth,Approved,False
+T0326,A199,2025-01-14 04:08:00,268.48,ZAR,Shell,Fuel,Card,Desktop,Johannesburg,Approved,False
+T0327,A199,2025-03-01 15:47:00,1903.41,ZAR,Dischem,Health,Card,Mobile,Port Elizabeth,Approved,False
+T0328,A199,2025-02-28 20:37:00,2181.37,ZAR,Nandos,Food,Card,Desktop,Bloemfontein,Approved,False
