@@ -805,6 +805,292 @@ print(f"Saved label encoder -> {ENCODER_PATH.resolve()}")"""
     write_nb(NB_DIR / "02_product_recommendation.ipynb", cells)
 
 
+def build_03() -> None:
+    cells = [
+        md(
+            """# 03 — Voiceprint Verification Model
+
+Trains a speaker-identification classifier on MFCC / spectral roll-off /
+energy features extracted from each member's voice commands
+("Yes, approve", "Confirm transaction") and their pitch-shift /
+time-stretch / background-noise augmentations.
+
+Run `python process_audio.py` first to (re)generate `data/audio_features.csv`
+from `audio/<person>/*.wav`."""
+        ),
+        md("## 0. Imports & config"),
+        code(
+            """from pathlib import Path
+
+import joblib
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import (
+    accuracy_score,
+    classification_report,
+    confusion_matrix,
+    f1_score,
+    log_loss,
+)
+from sklearn.model_selection import StratifiedKFold, cross_validate, train_test_split
+from sklearn.preprocessing import LabelEncoder
+
+DATA_PATH = Path("../data/audio_features.csv")
+MODEL_PATH = Path("../models/voice_verification_model.pkl")
+ENCODER_PATH = Path("../models/voice_label_encoder.pkl")
+REPORT_DIR = Path("../reports")
+REPORT_PATH = REPORT_DIR / "voice_verification_evaluation.md"
+CM_PATH = REPORT_DIR / "audio_confusion_matrix.png"
+TARGET = "person_id"
+RANDOM_STATE = 42"""
+        ),
+        md("## 1. Load & validate"),
+        code(
+            """if not DATA_PATH.exists():
+    raise FileNotFoundError(
+        f"Missing {DATA_PATH.resolve()}. Run `python process_audio.py` first."
+    )
+
+df = pd.read_csv(DATA_PATH, encoding="utf-8", sep=",")
+print(f"[OK] Loaded {DATA_PATH.name}  shape={df.shape}")
+
+required = ["customer_id", "person_id", "phrase", "augmentation"]
+missing = [c for c in required if c not in df.columns]
+if missing:
+    raise ValueError(f"{DATA_PATH.name} missing columns: {missing}")
+
+print("Samples per person:")
+print(df[TARGET].value_counts())
+print("\\nSamples per augmentation:")
+print(df["augmentation"].value_counts())
+print("\\nMissing values:", int(df.isnull().sum().sum()))"""
+        ),
+        md("## 2. Features / target"),
+        code(
+            """meta_cols = ["customer_id", "person_id", "phrase", "text", "augmentation", "file"]
+feature_cols = [c for c in df.columns if c not in meta_cols]
+
+X = df[feature_cols].copy()
+y_raw = df[TARGET].astype(str)
+
+label = LabelEncoder()
+y = label.fit_transform(y_raw)
+
+assert X.isnull().sum().sum() == 0
+print(f"Feature columns ({len(feature_cols)}):", feature_cols)
+print("Classes (voiceprints):", list(label.classes_))"""
+        ),
+        md("## 3. Train / test split, train classifier"),
+        code(
+            """X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    y,
+    test_size=0.25,
+    random_state=RANDOM_STATE,
+    stratify=y,
+)
+
+# Small, high-dimensional feature set from a handful of speakers ⇒
+# a modest, regularized forest generalizes better than a deep one.
+model = RandomForestClassifier(
+    n_estimators=200,
+    max_depth=6,
+    random_state=RANDOM_STATE,
+    class_weight="balanced",
+)
+model.fit(X_train, y_train)
+print("Train size:", len(X_train), "Test size:", len(X_test))"""
+        ),
+        md("## 4. Holdout evaluation — Accuracy, F1, Loss"),
+        code(
+            """y_pred = model.predict(X_test)
+y_proba = model.predict_proba(X_test)
+labels_idx = list(range(len(label.classes_)))
+
+accuracy = accuracy_score(y_test, y_pred)
+f1_macro = f1_score(y_test, y_pred, average="macro", labels=labels_idx, zero_division=0)
+f1_weighted = f1_score(y_test, y_pred, average="weighted", labels=labels_idx, zero_division=0)
+
+loss_value = None
+loss_note = ""
+try:
+    loss_value = float(log_loss(y_test, y_proba, labels=labels_idx))
+    if np.isnan(loss_value) or np.isinf(loss_value):
+        raise ValueError("Log loss is undefined (NaN/Inf).")
+except ValueError as exc:
+    loss_value = None
+    loss_note = f"Log loss could not be computed: {exc}."
+
+clf_report = classification_report(
+    y_test,
+    y_pred,
+    labels=labels_idx,
+    target_names=label.classes_,
+    zero_division=0,
+)
+
+print(f"Accuracy:      {accuracy:.4f}")
+print(f"F1 (macro):    {f1_macro:.4f}")
+print(f"F1 (weighted): {f1_weighted:.4f}")
+if loss_value is not None:
+    print(f"Loss (log_loss): {loss_value:.4f}")
+else:
+    print(loss_note or "Loss (log_loss): N/A")
+print()
+print(clf_report)
+
+cm = confusion_matrix(y_test, y_pred, labels=labels_idx)
+fig, ax = plt.subplots(figsize=(5, 4))
+sns.heatmap(
+    cm,
+    annot=True,
+    fmt="d",
+    cmap="Blues",
+    xticklabels=label.classes_,
+    yticklabels=label.classes_,
+    ax=ax,
+)
+ax.set_xlabel("Predicted")
+ax.set_ylabel("Actual")
+ax.set_title("Voiceprint Confusion Matrix (holdout)")
+plt.tight_layout()
+REPORT_DIR.mkdir(parents=True, exist_ok=True)
+fig.savefig(CM_PATH, dpi=120, bbox_inches="tight")
+plt.show()
+print(f"Saved confusion matrix -> {CM_PATH.resolve()}")"""
+        ),
+        md(
+            """## 5. Stratified K-Fold cross-validation
+
+`n_splits=3` matches the number of voiceprint classes (one member per class)."""
+        ),
+        code(
+            """n_splits = min(3, int(np.min(np.bincount(y))))
+cv = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=RANDOM_STATE)
+cv_results = cross_validate(
+    model,
+    X,
+    y,
+    cv=cv,
+    scoring=["accuracy", "f1_macro"],
+    return_train_score=False,
+)
+
+acc_scores = cv_results["test_accuracy"]
+f1_scores = cv_results["test_f1_macro"]
+print("Fold accuracy:", np.round(acc_scores, 4))
+print(f"Mean accuracy: {acc_scores.mean():.4f}  std: {acc_scores.std():.4f}")
+print("Fold F1-macro:", np.round(f1_scores, 4))
+print(f"Mean F1-macro: {f1_scores.mean():.4f}  std: {f1_scores.std():.4f}")"""
+        ),
+        md("## 6. Feature importance"),
+        code(
+            """importances = (
+    pd.Series(model.feature_importances_, index=feature_cols)
+    .sort_values(ascending=False)
+)
+print(importances.head(20).to_string())"""
+        ),
+        md("## 7. Export evaluation report + persist model"),
+        code(
+            """REPORT_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def _fmt(v):
+    return f"{v:.4f}" if v is not None else "N/A"
+
+
+loss_section = f"| Loss (log_loss) | {_fmt(loss_value)} |\\n"
+if loss_note:
+    loss_section += f"\\n> {loss_note}\\n"
+
+importance_md = "\\n".join(
+    f"| `{name}` | {val:.4f} |" for name, val in importances.head(20).items()
+)
+
+report = f\"\"\"# Voiceprint Verification — Evaluation Report
+
+Generated by `notebooks/03_voice_verification.ipynb`.
+
+## Dataset statistics
+
+| Item | Value |
+|------|-------|
+| Source file | `{DATA_PATH.name}` |
+| Rows (voice samples) | {len(df)} |
+| Features used | {len(feature_cols)} |
+| Voiceprint classes (members) | {len(label.classes_)} |
+| Train / test size | {len(X_train)} / {len(X_test)} |
+| Random state | {RANDOM_STATE} |
+
+### Samples per voiceprint
+
+```
+{df[TARGET].value_counts().to_string()}
+```
+
+## Holdout metrics
+
+| Metric | Value |
+|--------|-------|
+| Accuracy | {_fmt(accuracy)} |
+| F1 (macro) | {_fmt(f1_macro)} |
+| F1 (weighted) | {_fmt(f1_weighted)} |
+{loss_section}
+
+## Cross-validation (StratifiedKFold, n_splits={n_splits})
+
+| Metric | Fold scores | Mean | Std |
+|--------|-------------|------|-----|
+| Accuracy | {np.round(acc_scores, 4).tolist()} | {acc_scores.mean():.4f} | {acc_scores.std():.4f} |
+| F1 (macro) | {np.round(f1_scores, 4).tolist()} | {f1_scores.mean():.4f} | {f1_scores.std():.4f} |
+
+## Classification report
+
+```
+{clf_report}
+```
+
+## Confusion matrix
+
+![Confusion matrix](audio_confusion_matrix.png)
+
+```
+{pd.DataFrame(cm, index=label.classes_, columns=label.classes_).to_string()}
+```
+
+## Feature importance (top 20)
+
+| Feature | Importance |
+|---------|------------|
+{importance_md}
+
+## Notes
+
+- Target is `person_id` (voiceprint identity), not `customer_id` — `audio_features.csv`
+  uses its own `C0xx` customer IDs (see README limitations) until linked to tabular IDs.
+- Each member contributes 2 phrases x 7 variants (original + pitch up/down +
+  stretch fast/slow + noise low/high) = 14 samples.
+- Small sample size ⇒ metrics are illustrative of the pipeline, not production-grade accuracy.
+\"\"\"
+
+REPORT_PATH.write_text(report, encoding="utf-8")
+print(f"Saved evaluation report -> {REPORT_PATH.resolve()}")
+
+MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
+joblib.dump(model, MODEL_PATH)
+joblib.dump(label, ENCODER_PATH)
+print(f"Saved model -> {MODEL_PATH.resolve()}")
+print(f"Saved label encoder -> {ENCODER_PATH.resolve()}")"""
+        ),
+    ]
+    write_nb(NB_DIR / "03_voice_verification.ipynb", cells)
+
+
 if __name__ == "__main__":
     build_01()
     build_02()
+    build_03()

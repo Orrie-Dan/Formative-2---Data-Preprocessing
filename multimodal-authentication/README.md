@@ -15,20 +15,31 @@ multimodal-authentication/
 │   └── audio_features.csv
 ├── images/
 ├── audio/
+│   ├── person1/ person2/ person3/   # yes_approve.wav, confirm_transaction.wav
+│   └── augmented/<person>/          # pitch/stretch/noise variants (Phase 3 / Task 3)
 ├── models/
 │   ├── product_model.pkl
-│   └── product_label_encoder.pkl
+│   ├── product_label_encoder.pkl
+│   ├── voice_verification_model.pkl
+│   └── voice_label_encoder.pkl
 ├── reports/
 │   ├── evaluation_report.md
-│   └── confusion_matrix.png
+│   ├── confusion_matrix.png
+│   ├── voice_verification_evaluation.md
+│   ├── audio_confusion_matrix.png
+│   └── audio/
+│       ├── waveforms/
+│       └── spectrograms/
 ├── notebooks/
 │   ├── 01_data_preprocessing.ipynb
-│   └── 02_product_recommendation.ipynb
+│   ├── 02_product_recommendation.ipynb
+│   └── 03_voice_verification.ipynb
 ├── scripts/
 │   └── _build_notebooks.py          # regenerates notebook templates if needed
 ├── archive/                         # obsolete scripts (not part of the pipeline)
 ├── app.py
 ├── process_images.py
+├── process_audio.py
 ├── requirements.txt
 └── README.md
 ```
@@ -51,11 +62,13 @@ pip install -r requirements.txt
 Run notebooks **in order** from the `notebooks/` directory (relative paths assume that CWD):
 
 1. **Preprocessing** — `notebooks/01_data_preprocessing.ipynb`
-2. **Train & evaluate** — `notebooks/02_product_recommendation.ipynb`
+2. **Train & evaluate (product)** — `notebooks/02_product_recommendation.ipynb`
 3. **(Optional) Image features** — `python process_images.py`
-4. **Demo app** — `streamlit run app.py`
+4. **Audio features** — `python process_audio.py`
+5. **Train & evaluate (voiceprint)** — `notebooks/03_voice_verification.ipynb`
+6. **Demo app** — `streamlit run app.py`
 
-Expected artifacts after steps 1–2:
+Expected artifacts after steps 1–2 and 4–5:
 
 | Artifact | Produced by |
 |----------|-------------|
@@ -65,6 +78,12 @@ Expected artifacts after steps 1–2:
 | `models/product_label_encoder.pkl` | Notebook 02 |
 | `reports/evaluation_report.md` | Notebook 02 |
 | `reports/confusion_matrix.png` | Notebook 02 |
+| `data/audio_features.csv` | `process_audio.py` |
+| `reports/audio/waveforms/*.png`, `reports/audio/spectrograms/*.png` | `process_audio.py` |
+| `models/voice_verification_model.pkl` | Notebook 03 |
+| `models/voice_label_encoder.pkl` | Notebook 03 |
+| `reports/voice_verification_evaluation.md` | Notebook 03 |
+| `reports/audio_confusion_matrix.png` | Notebook 03 |
 
 ## Preprocessing workflow (Notebook 01)
 
@@ -108,6 +127,24 @@ Holdout metrics written to `reports/evaluation_report.md`:
 
 If ROC-AUC or log loss cannot be computed (e.g. a class absent from the holdout fold), the report documents the reason instead of failing.
 
+## Audio processing workflow (`process_audio.py`)
+
+Phase 3 / Task 3 — voiceprint feature pipeline for `audio/<person>/{yes_approve,confirm_transaction}.wav`:
+
+1. **Load** each recording at 22.05 kHz mono (`librosa.load`).
+2. **Visualize**: waveform + log-frequency spectrogram saved to `reports/audio/waveforms/` and `reports/audio/spectrograms/`.
+3. **Augment** each phrase into 7 variants: `original`, `pitch_up`/`pitch_down` (±3 semitones), `stretch_fast`/`stretch_slow` (1.2x / 0.8x rate), `noise_low`/`noise_high` (30 dB / 15 dB SNR Gaussian noise) — written to `audio/augmented/<person>/`.
+4. **Extract features** per variant: 13 MFCCs (mean + std), spectral roll-off (mean + std), RMS energy (mean + std) — 30 features total.
+5. **Export**: `data/audio_features.csv`, one row per `(person, phrase, augmentation)` — 3 members x 2 phrases x 7 variants = 42 rows.
+
+## Voiceprint verification (Notebook 03)
+
+1. Load `data/audio_features.csv`; target is `person_id` (voiceprint identity).
+2. Stratified 75/25 holdout split; `RandomForestClassifier` (`n_estimators=200`, `max_depth=6`, `class_weight="balanced"`).
+3. Evaluate on holdout: **Accuracy**, **F1 (macro/weighted)**, **Loss** (`log_loss` on predicted probabilities), classification report, confusion matrix.
+4. `StratifiedKFold` cross-validation (`n_splits=3`, one fold size per member).
+5. Export `reports/voice_verification_evaluation.md`, `reports/audio_confusion_matrix.png`, and persist `models/voice_verification_model.pkl` + `models/voice_label_encoder.pkl`.
+
 ## Run the demo app
 
 ```bash
@@ -125,7 +162,7 @@ The app uses `fraud_rate` and social scores from `merged_dataset.csv` for a heur
 | `merged_dataset.csv` | Platform-level joined view (auth / inspection) |
 | `modeling_dataset.csv` | Customer-level frame for recommendation training |
 | `image_features.csv` | Extracted face / emotion image features |
-| `audio_features.csv` | Extracted MFCC / pitch audio features |
+| `audio_features.csv` | Extracted MFCC / spectral roll-off / energy voiceprint features (`C0xx` customer IDs, `person_id`, `phrase`, `augmentation`) |
 
 ## Modeling notes
 
@@ -139,6 +176,7 @@ The app uses `fraud_rate` and social scores from `merged_dataset.csv` for a heur
 ## Limitations
 
 - Recommendation accuracy is modest (small N, many classes, social-only features by design).
-- Audio `customer_id` values (`C001`…) are not yet linked to tabular IDs (`a178`); the app falls back to demo `person1` audio.
+- Audio `customer_id` values (`C001`…) are intentionally **not** linked to tabular IDs (`a178`…); the app falls back to `person1` demo audio when a selected customer has no matching voiceprint row.
 - Image features in this repo are demo-scoped (`person1`).
-- CV uses `n_splits=2` because the rarest product class has only two customers.
+- Voice samples are synthesized (`espeak`, one voice profile per simulated member) rather than real human recordings; the pipeline (augment → extract → train → evaluate) is production-shaped, but holdout metrics (~0.73 accuracy on 11 samples) are illustrative, not a real-world verification benchmark.
+- CV uses `n_splits=2` for the product model (rarest class has only two customers) and `n_splits=3` for the voiceprint model (one fold per member).
