@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent
 IMAGES_DIR = BASE_DIR / "images"
 AUG_DIR = IMAGES_DIR / "augmented"
 DATA_DIR = BASE_DIR / "data"
-PERSONS = ["person1"]
+PERSONS = ["person1", "person2"]
 EMOTIONS = ["neutral", "smile", "surprised"]
 
 
@@ -140,7 +140,8 @@ def main(show: bool = False) -> pd.DataFrame:
     features.to_csv(out_csv, index=False)
 
     print(f"Saved {len(features)} rows -> {out_csv}")
-    print("Columns:", list(features.columns[:5]), "...", f"Feature128 present={('Feature128' in features.columns)}")
+    print("Columns:", list(features.columns[:5]), "...",
+          f"Feature128 present={('Feature128' in features.columns)}")
     return features
 
 
