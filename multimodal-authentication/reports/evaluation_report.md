@@ -40,10 +40,10 @@ travel        2
 | Recall (macro) | 0.0556 |
 | F1 (macro) | 0.0370 |
 | F1 (weighted) | 0.0784 |
-| ROC-AUC (OvR macro) | 0.4879 |
+| ROC-AUC (OvR macro) | 0.4894 |
 
 > OvR macro AUC over the 11 classes present in holdout (absent from holdout: ['travel']). Probabilities renormalized over present classes only.
-| Log loss | 2.8647 |
+| Log loss | 2.8252 |
 
 
 ## Cross-validation (StratifiedKFold, n_splits=2)
@@ -51,7 +51,7 @@ travel        2
 | Metric | Fold scores | Mean | Std |
 |--------|-------------|------|-----|
 | Accuracy | [0.0714, 0.119] | 0.0952 | 0.0238 |
-| F1 (macro) | [0.0306, 0.0849] | 0.0578 | 0.0271 |
+| F1 (macro) | [0.0306, 0.0793] | 0.0550 | 0.0243 |
 
 ## Classification report
 
@@ -87,7 +87,7 @@ clothing          0          0        0     0     1          0       0      0   
 ecommerce         0          0        0     0     1          0       0      0       0          0       0          0
 finance           1          0        2     0     0          0       0      0       0          0       0          0
 food              0          0        0     0     0          0       0      0       0          1       0          0
-fuel              0          0        0     0     0          1       0      0       0          0       0          0
+fuel              0          0        0     0     0          0       0      0       0          0       1          0
 groceries         0          0        1     0     0          0       0      0       0          0       0          0
 health            0          0        0     0     0          0       0      0       1          0       0          0
 other             0          0        1     0     0          0       0      0       1          1       0          0
@@ -101,18 +101,18 @@ wholesale         0          0        0     0     0          1       0      0   
 
 | Feature | Importance |
 |---------|------------|
-| `num__purchase_interest_score` | 0.2025 |
-| `num__average_engagement` | 0.1994 |
-| `num__engagement_score` | 0.1983 |
-| `num__platform_count` | 0.0778 |
-| `cat__main_platform_linkedin` | 0.0511 |
-| `cat__review_sentiment_positive` | 0.0489 |
-| `cat__main_platform_instagram` | 0.0433 |
-| `cat__main_platform_tiktok` | 0.0416 |
-| `cat__review_sentiment_negative` | 0.0407 |
+| `num__purchase_interest_score` | 0.2021 |
+| `num__average_engagement` | 0.1987 |
+| `num__engagement_score` | 0.1978 |
+| `num__platform_count` | 0.0781 |
+| `cat__main_platform_linkedin` | 0.0509 |
+| `cat__review_sentiment_positive` | 0.0493 |
+| `cat__main_platform_instagram` | 0.0441 |
+| `cat__main_platform_tiktok` | 0.0421 |
+| `cat__review_sentiment_negative` | 0.0400 |
 | `cat__main_platform_twitter` | 0.0356 |
-| `cat__main_platform_facebook` | 0.0305 |
-| `cat__review_sentiment_neutral` | 0.0303 |
+| `cat__review_sentiment_neutral` | 0.0306 |
+| `cat__main_platform_facebook` | 0.0306 |
 
 ## Notes
 
