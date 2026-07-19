@@ -826,6 +826,13 @@ Trains a face-identity classifier on the 128-d `face_recognition` embeddings pro
 - **Threshold-based unknown handling**: predictions with max class probability below
   `UNKNOWN_THRESHOLD` are rejected as `UNKNOWN` instead of forced onto the closest known
   person. The threshold is persisted so the Task 6 CLI demo can reuse it.
+- **Distance-based novelty guard**: softmax confidence alone is not a reliable unknown-input
+  detector — a linear classifier can extrapolate *confidently* far outside the training
+  distribution (this was verified empirically against the voiceprint model in Task 6; the
+  same weakness applies here). So a sample is only accepted if it is *also* within
+  `DISTANCE_MARGIN` × the largest observed intra-class distance from its predicted class's
+  centroid (in scaled embedding space); otherwise it is rejected as `UNKNOWN` regardless of
+  confidence.
 - **Small-N caveat**: only a handful of source photos per person — metrics are directional,
   not production-grade."""
         ),
@@ -860,7 +867,8 @@ CM_PATH = REPORT_DIR / "face_recognition_confusion_matrix.png"
 FEATURE_PREFIX = "Feature"
 RANDOM_STATE = 42
 N_SPLITS = 3
-UNKNOWN_THRESHOLD = 0.6"""
+UNKNOWN_THRESHOLD = 0.6
+DISTANCE_MARGIN = 1.5  # multiplier on max observed intra-class distance (novelty guard)"""
         ),
         md("## 1. Load & validate"),
         code(
@@ -1032,6 +1040,24 @@ available row so the CLI demo (Task 6) has access to all known people/photos."""
             """final_model = build_pipeline()
 final_model.fit(X, y)
 
+# Softmax/sigmoid confidence from a linear classifier is not a reliable unknown-
+# input detector: LogisticRegression extrapolates *confidently* far outside the
+# training distribution (verified empirically — random noise scored >0.99 "known
+# person" confidence). A distance-to-centroid novelty check catches this: reject
+# as UNKNOWN if the scaled sample is farther from its predicted class centroid
+# than any training point was, times a safety margin.
+scaler = final_model.named_steps["scaler"]
+X_scaled = scaler.transform(X)
+centroids: dict[str, list[float]] = {}
+max_intra_class_distance: dict[str, float] = {}
+for class_idx, class_name in enumerate(label.classes_):
+    class_points = X_scaled[y == class_idx]
+    centroid = class_points.mean(axis=0)
+    centroids[class_name] = centroid.tolist()
+    max_intra_class_distance[class_name] = float(
+        np.linalg.norm(class_points - centroid, axis=1).max()
+    )
+
 MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
 joblib.dump(final_model, MODEL_PATH)
 joblib.dump(label, ENCODER_PATH)
@@ -1040,12 +1066,16 @@ config = {
     "unknown_threshold": UNKNOWN_THRESHOLD,
     "feature_columns": feature_cols,
     "classes": list(label.classes_),
+    "centroids": centroids,
+    "max_intra_class_distance": max_intra_class_distance,
+    "distance_margin": DISTANCE_MARGIN,
 }
 CONFIG_PATH.write_text(json.dumps(config, indent=2), encoding="utf-8")
 
 print(f"Saved model   -> {MODEL_PATH.resolve()}")
 print(f"Saved encoder -> {ENCODER_PATH.resolve()}")
-print(f"Saved config  -> {CONFIG_PATH.resolve()}")"""
+print(f"Saved config  -> {CONFIG_PATH.resolve()}")
+print("Max intra-class distance (scaled space):", max_intra_class_distance)"""
         ),
         md("## 7. Export evaluation report"),
         code(
@@ -1146,6 +1176,13 @@ Trains a voice-identity classifier on the MFCC / spectral features produced by
   recognition model, for consistency across modalities.
 - **Threshold-based unknown handling**: same `UNKNOWN_THRESHOLD` mechanism as notebook 03 —
   max class probability below threshold => `UNKNOWN`.
+- **Distance-based novelty guard**: discovered necessary while testing the Task 6 CLI demo —
+  synthetic white-noise audio was classified as `person1` with 0.99 confidence, because a
+  linear classifier extrapolates confidently far outside its training distribution instead
+  of expressing uncertainty. A sample is now only accepted if it is *also* within
+  `DISTANCE_MARGIN` × the largest observed intra-class distance from its predicted class's
+  centroid (in scaled feature space); otherwise it is rejected as `UNKNOWN` regardless of
+  confidence.
 - **Small-N caveat**: only 2 source recordings per person (4 groups total) — metrics are
   directional, not production-grade."""
         ),
@@ -1180,7 +1217,8 @@ CM_PATH = REPORT_DIR / "voice_verification_confusion_matrix.png"
 NON_FEATURE_COLS = {"Person", "Audio", "Phrase", "SourcePath"}
 RANDOM_STATE = 42
 N_SPLITS = 2
-UNKNOWN_THRESHOLD = 0.6"""
+UNKNOWN_THRESHOLD = 0.6
+DISTANCE_MARGIN = 1.5  # multiplier on max observed intra-class distance (novelty guard)"""
         ),
         md("## 1. Load & validate"),
         code(
@@ -1352,6 +1390,24 @@ available row so the CLI demo (Task 6) has access to all known people/recordings
             """final_model = build_pipeline()
 final_model.fit(X, y)
 
+# Softmax/sigmoid confidence from a linear classifier is not a reliable unknown-
+# input detector: LogisticRegression extrapolates *confidently* far outside the
+# training distribution (verified empirically — random noise scored >0.99 "known
+# person" confidence). A distance-to-centroid novelty check catches this: reject
+# as UNKNOWN if the scaled sample is farther from its predicted class centroid
+# than any training point was, times a safety margin.
+scaler = final_model.named_steps["scaler"]
+X_scaled = scaler.transform(X)
+centroids: dict[str, list[float]] = {}
+max_intra_class_distance: dict[str, float] = {}
+for class_idx, class_name in enumerate(label.classes_):
+    class_points = X_scaled[y == class_idx]
+    centroid = class_points.mean(axis=0)
+    centroids[class_name] = centroid.tolist()
+    max_intra_class_distance[class_name] = float(
+        np.linalg.norm(class_points - centroid, axis=1).max()
+    )
+
 MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
 joblib.dump(final_model, MODEL_PATH)
 joblib.dump(label, ENCODER_PATH)
@@ -1360,12 +1416,16 @@ config = {
     "unknown_threshold": UNKNOWN_THRESHOLD,
     "feature_columns": feature_cols,
     "classes": list(label.classes_),
+    "centroids": centroids,
+    "max_intra_class_distance": max_intra_class_distance,
+    "distance_margin": DISTANCE_MARGIN,
 }
 CONFIG_PATH.write_text(json.dumps(config, indent=2), encoding="utf-8")
 
 print(f"Saved model   -> {MODEL_PATH.resolve()}")
 print(f"Saved encoder -> {ENCODER_PATH.resolve()}")
-print(f"Saved config  -> {CONFIG_PATH.resolve()}")"""
+print(f"Saved config  -> {CONFIG_PATH.resolve()}")
+print("Max intra-class distance (scaled space):", max_intra_class_distance)"""
         ),
         md("## 7. Export evaluation report"),
         code(
