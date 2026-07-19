@@ -1124,7 +1124,328 @@ print(f"Saved evaluation report -> {REPORT_PATH.resolve()}")"""
     write_nb(NB_DIR / "03_facial_recognition.ipynb", cells)
 
 
+def build_04() -> None:
+    cells = [
+        md(
+            """# 04 — Voiceprint Verification Model
+
+Trains a voice-identity classifier on the MFCC / spectral features produced by
+`process_audio.py` (`data/audio_features.csv`).
+
+**Decisions**
+- Features: `MFCC_1`..`MFCC_13`, `SpectralRolloff`, `SpectralCentroid`, `RMSEnergy`,
+  `ZeroCrossingRate`.
+- Target: `Person` — an **identification** model ("whose voice is this?"), not open-set
+  verification — same framing as notebook 03.
+- **Group-aware split**: each `(Person, Phrase)` pair is one physical recording; its 4
+  augmented variants (original/pitch-shift/time-stretch/noise) are near-duplicates. Splits
+  group all variants of a recording onto the same side via `StratifiedGroupKFold`. Only 2
+  recordings per person exist, so `N_SPLITS=2` (each fold holds out exactly 1 recording's
+  4 rows per person).
+- **Model**: `StandardScaler` + `LogisticRegression`, same architecture as the facial
+  recognition model, for consistency across modalities.
+- **Threshold-based unknown handling**: same `UNKNOWN_THRESHOLD` mechanism as notebook 03 —
+  max class probability below threshold => `UNKNOWN`.
+- **Small-N caveat**: only 2 source recordings per person (4 groups total) — metrics are
+  directional, not production-grade."""
+        ),
+        code(
+            """from pathlib import Path
+import json
+
+import joblib
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import (
+    accuracy_score,
+    classification_report,
+    confusion_matrix,
+    f1_score,
+    log_loss,
+)
+from sklearn.model_selection import StratifiedGroupKFold
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+
+DATA_PATH = Path("../data/audio_features.csv")
+MODEL_PATH = Path("../models/voice_verification_model.pkl")
+ENCODER_PATH = Path("../models/voice_label_encoder.pkl")
+CONFIG_PATH = Path("../models/voice_verification_config.json")
+REPORT_DIR = Path("../reports")
+REPORT_PATH = REPORT_DIR / "voice_verification_report.md"
+CM_PATH = REPORT_DIR / "voice_verification_confusion_matrix.png"
+NON_FEATURE_COLS = {"Person", "Audio", "Phrase", "SourcePath"}
+RANDOM_STATE = 42
+N_SPLITS = 2
+UNKNOWN_THRESHOLD = 0.6"""
+        ),
+        md("## 1. Load & validate"),
+        code(
+            """df = pd.read_csv(DATA_PATH, encoding="utf-8", sep=",")
+print(f"[OK] Loaded {DATA_PATH.name}  shape={df.shape}")
+
+required = ["Person", "Phrase"]
+missing = [c for c in required if c not in df.columns]
+if missing:
+    raise ValueError(f"{DATA_PATH.name} missing columns: {missing}")
+
+feature_cols = [c for c in df.columns if c not in NON_FEATURE_COLS]
+if not feature_cols:
+    raise ValueError(f"No feature columns found in {DATA_PATH.name}")
+
+assert df[feature_cols].isnull().sum().sum() == 0, "Audio features contain nulls"
+assert df["Person"].nunique() >= 2, "Need at least 2 known people to train a classifier"
+
+print("People:", df["Person"].value_counts().to_dict())
+print("Feature columns:", len(feature_cols))
+print(df[["Person", "Audio", "Phrase"]].head(20))"""
+        ),
+        md(
+            """## 2. Group-aware labels
+
+Each `(Person, Phrase)` pair is one physical recording; its augmented variants must stay
+together on one side of any split."""
+        ),
+        code(
+            """df["group"] = df["Person"].astype(str) + "_" + df["Phrase"].astype(str)
+
+label = LabelEncoder()
+y = label.fit_transform(df["Person"])
+X = df[feature_cols].to_numpy()
+groups = df["group"].to_numpy()
+
+print("Classes:", list(label.classes_))
+print("Unique (Person, Phrase) recordings:", df["group"].nunique())"""
+        ),
+        md("## 3. Model pipeline"),
+        code(
+            """def build_pipeline() -> Pipeline:
+    return Pipeline(
+        steps=[
+            ("scaler", StandardScaler()),
+            (
+                "classifier",
+                LogisticRegression(
+                    max_iter=2000,
+                    random_state=RANDOM_STATE,
+                    class_weight="balanced",
+                ),
+            ),
+        ]
+    )"""
+        ),
+        md(
+            """## 4. Grouped, stratified cross-validation
+
+`StratifiedGroupKFold` keeps every recording's 4 variants together while balancing people
+across folds. Each fold asserts no recording group appears on both sides of the split."""
+        ),
+        code(
+            """cv = StratifiedGroupKFold(n_splits=N_SPLITS, shuffle=True, random_state=RANDOM_STATE)
+
+fold_accuracy, fold_f1 = [], []
+holdout_idx = None  # keep fold 0's split for the detailed holdout report below
+
+for fold, (train_idx, test_idx) in enumerate(cv.split(X, y, groups)):
+    assert set(groups[train_idx]).isdisjoint(groups[test_idx]), (
+        f"Recording leakage across fold {fold} split"
+    )
+
+    pipe = build_pipeline()
+    pipe.fit(X[train_idx], y[train_idx])
+    preds = pipe.predict(X[test_idx])
+
+    acc = accuracy_score(y[test_idx], preds)
+    f1 = f1_score(y[test_idx], preds, average="macro", zero_division=0)
+    fold_accuracy.append(acc)
+    fold_f1.append(f1)
+    print(
+        f"Fold {fold}: accuracy={acc:.4f}  f1_macro={f1:.4f}  "
+        f"train={len(train_idx)} test={len(test_idx)}"
+    )
+
+    if holdout_idx is None:
+        holdout_idx = (train_idx, test_idx)
+
+fold_accuracy = np.array(fold_accuracy)
+fold_f1 = np.array(fold_f1)
+print(f"\\nMean accuracy: {fold_accuracy.mean():.4f}  std: {fold_accuracy.std():.4f}")
+print(f"Mean F1 (macro): {fold_f1.mean():.4f}  std: {fold_f1.std():.4f}")"""
+        ),
+        md("## 5. Holdout evaluation (fold 0) + threshold-based unknown handling"),
+        code(
+            """train_idx, test_idx = holdout_idx
+model = build_pipeline()
+model.fit(X[train_idx], y[train_idx])
+
+y_test = y[test_idx]
+y_proba = model.predict_proba(X[test_idx])
+y_pred = model.predict(X[test_idx])
+labels_idx = list(range(len(label.classes_)))
+
+accuracy = accuracy_score(y_test, y_pred)
+f1_macro = f1_score(y_test, y_pred, average="macro", labels=labels_idx, zero_division=0)
+f1_weighted = f1_score(y_test, y_pred, average="weighted", labels=labels_idx, zero_division=0)
+
+log_loss_value = None
+log_loss_note = ""
+try:
+    log_loss_value = float(log_loss(y_test, y_proba, labels=labels_idx))
+    if np.isnan(log_loss_value) or np.isinf(log_loss_value):
+        raise ValueError("Log loss is undefined (NaN/Inf).")
+except ValueError as exc:
+    log_loss_value = None
+    log_loss_note = f"Log loss could not be computed: {exc}."
+
+clf_report = classification_report(
+    y_test, y_pred, labels=labels_idx, target_names=label.classes_, zero_division=0
+)
+
+# Threshold-based rejection: below UNKNOWN_THRESHOLD confidence => treat as UNKNOWN
+max_proba = y_proba.max(axis=1)
+predicted_labels = np.where(
+    max_proba >= UNKNOWN_THRESHOLD, label.inverse_transform(y_pred), "UNKNOWN"
+)
+n_rejected = int((predicted_labels == "UNKNOWN").sum())
+
+print(f"Accuracy:      {accuracy:.4f}")
+print(f"F1 (macro):    {f1_macro:.4f}")
+print(f"F1 (weighted): {f1_weighted:.4f}")
+print(f"Log loss:      {log_loss_value:.4f}" if log_loss_value is not None else log_loss_note)
+print(
+    f"\\nUNKNOWN_THRESHOLD={UNKNOWN_THRESHOLD} -> {n_rejected}/{len(test_idx)} holdout "
+    "predictions rejected as UNKNOWN (all rows here are known people; expected low/zero)"
+)
+print()
+print(clf_report)
+
+cm = confusion_matrix(y_test, y_pred, labels=labels_idx)
+fig, ax = plt.subplots(figsize=(5, 4))
+sns.heatmap(
+    cm,
+    annot=True,
+    fmt="d",
+    cmap="Blues",
+    xticklabels=label.classes_,
+    yticklabels=label.classes_,
+    ax=ax,
+)
+ax.set_xlabel("Predicted")
+ax.set_ylabel("Actual")
+ax.set_title("Voiceprint Verification — Confusion Matrix (holdout fold)")
+plt.tight_layout()
+REPORT_DIR.mkdir(parents=True, exist_ok=True)
+fig.savefig(CM_PATH, dpi=120, bbox_inches="tight")
+plt.show()
+print(f"Saved confusion matrix -> {CM_PATH.resolve()}")"""
+        ),
+        md(
+            """## 6. Fit final model on all data + persist
+
+The holdout/CV folds above are for evaluation only; the deployed model is refit on every
+available row so the CLI demo (Task 6) has access to all known people/recordings."""
+        ),
+        code(
+            """final_model = build_pipeline()
+final_model.fit(X, y)
+
+MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
+joblib.dump(final_model, MODEL_PATH)
+joblib.dump(label, ENCODER_PATH)
+
+config = {
+    "unknown_threshold": UNKNOWN_THRESHOLD,
+    "feature_columns": feature_cols,
+    "classes": list(label.classes_),
+}
+CONFIG_PATH.write_text(json.dumps(config, indent=2), encoding="utf-8")
+
+print(f"Saved model   -> {MODEL_PATH.resolve()}")
+print(f"Saved encoder -> {ENCODER_PATH.resolve()}")
+print(f"Saved config  -> {CONFIG_PATH.resolve()}")"""
+        ),
+        md("## 7. Export evaluation report"),
+        code(
+            """def _fmt(v):
+    return f"{v:.4f}" if v is not None else "N/A"
+
+log_loss_section = f"\\n> {log_loss_note}\\n" if log_loss_note else ""
+
+report = f\"\"\"# Voiceprint Verification — Evaluation Report
+
+Generated by `notebooks/04_voiceprint_verification.ipynb`.
+
+## Dataset statistics
+
+| Item | Value |
+|------|-------|
+| Source file | `{DATA_PATH.name}` |
+| Rows (audio variants) | {len(df)} |
+| Unique source recordings (groups) | {df['group'].nunique()} |
+| Known people | {len(label.classes_)} ({', '.join(label.classes_)}) |
+| Feature dimensions | {len(feature_cols)} |
+| CV folds | {N_SPLITS} (StratifiedGroupKFold, grouped by Person+Phrase recording) |
+| Unknown threshold | {UNKNOWN_THRESHOLD} |
+
+## Cross-validation (grouped, every recording rotates through test)
+
+| Metric | Fold scores | Mean | Std |
+|--------|-------------|------|-----|
+| Accuracy | {np.round(fold_accuracy, 4).tolist()} | {fold_accuracy.mean():.4f} | {fold_accuracy.std():.4f} |
+| F1 (macro) | {np.round(fold_f1, 4).tolist()} | {fold_f1.mean():.4f} | {fold_f1.std():.4f} |
+
+## Holdout metrics (fold 0)
+
+| Metric | Value |
+|--------|-------|
+| Accuracy | {_fmt(accuracy)} |
+| F1 (macro) | {_fmt(f1_macro)} |
+| F1 (weighted) | {_fmt(f1_weighted)} |
+| Log loss | {_fmt(log_loss_value)} |
+{log_loss_section}
+## Classification report (holdout fold)
+
+```
+{clf_report}
+```
+
+## Confusion matrix
+
+![Confusion matrix](voice_verification_confusion_matrix.png)
+
+## Unknown / unauthorized handling
+
+Predictions with max class probability below `{UNKNOWN_THRESHOLD}` are rejected as `UNKNOWN`
+rather than forced to the nearest known class. On this holdout fold (every row belongs to a
+known person), {n_rejected}/{len(test_idx)} predictions were rejected — expected to be low or
+zero, since none of these test rows are genuinely unauthorized. True unauthorized-attempt
+behavior (a voice never seen during training) is exercised in the Task 6 CLI demo, not in
+this dataset.
+
+## Notes
+
+- **Identification, not open-set verification**: the model classifies "which known person",
+  with unknown-identity rejection handled via the probability threshold above rather than
+  learned from negative examples.
+- **Group-aware evaluation**: augmented variants (pitch-shift/time-stretch/noise) of the
+  same recording are kept together on one side of every split, so metrics reflect
+  generalization to a new recording rather than a transformed duplicate of a training clip.
+- **Small-N caveat**: only {df['group'].nunique()} source recordings across
+  {len(label.classes_)} people. Metrics are directional, not production-grade.
+\"\"\"
+
+REPORT_PATH.write_text(report, encoding="utf-8")
+print(f"Saved evaluation report -> {REPORT_PATH.resolve()}")"""
+        ),
+    ]
+    write_nb(NB_DIR / "04_voiceprint_verification.ipynb", cells)
+
+
 if __name__ == "__main__":
     build_01()
     build_02()
     build_03()
+    build_04()
